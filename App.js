@@ -1,52 +1,112 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-// import {StyleSheet, Text, View} from 'react-native';
+import 'react-native-gesture-handler';
+import {
+  Text,
+  View,
+  SafeAreaView,
+  ScrollView,
+  Dimensions,
+  Image,
+} from 'react-native';
 import {createAppContainer} from 'react-navigation';
-import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
+import {DrawerItems, createDrawerNavigator} from 'react-navigation-drawer';
+import {Icon} from 'native-base';
+import HomePage from './src/components/Page/HomePage';
+import SettingsPage from './src/components/Page/SettingsPage';
+import NotificationPage from './src/components/Page/Notifications';
+import NewsPage from './src/components/Page/News';
 
-import HomeScreen from './src/components/HomeScreen';
-import AboutScreen from './src/components/AboutScreen';
-import TestScreen from './src/components/TestScreen';
-export default class App extends React.Component {
-  render() {
-    return <AppContainer />;
-  }
-}
+const {width} = Dimensions.get('window');
 
-const AppNavigator = createMaterialTopTabNavigator(
+const CustomDrawerNavigation = props => {
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <View style={{height: 250, backgroundColor: '#d2d2d2', opacity: 0.9}}>
+        <View
+          style={{
+            height: 200,
+            backgroundColor: 'Green',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Image
+            source={require('./src/assets/no-image.png')}
+            style={{height: 150, width: 150, borderRadius: 60}}
+          />
+        </View>
+        <View
+          style={{
+            height: 50,
+            backgroundColor: 'Green',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}>
+          <Text>John Doe</Text>
+        </View>
+      </View>
+      <ScrollView>
+        <DrawerItems {...props} />
+      </ScrollView>
+      <View style={{alignItems: 'center', bottom: 20}}>
+        <View style={{flexDirection: 'row'}}>
+          <View style={{flexDirection: 'column', marginRight: 15}}>
+            <Icon
+              name="flask"
+              style={{fontSize: 24}}
+              onPress={() => console.log('Tıkladın')}
+            />
+          </View>
+          <View style={{flexDirection: 'column'}}>
+            <Icon
+              name="call"
+              style={{fontSize: 24}}
+              onPress={() => console.log('Tıkladın')}
+            />
+          </View>
+        </View>
+      </View>
+    </SafeAreaView>
+  );
+};
+
+const Drawer = createDrawerNavigator(
   {
-    'English to German': {
-      screen: HomeScreen,
+    Home: {
+      screen: HomePage,
+      navigationOptions: {
+        title: 'Homepage',
+      },
     },
-    'German to English': {
-      screen: AboutScreen,
+    Settings: {
+      screen: SettingsPage,
+      navigationOptions: {
+        title: 'Settings',
+      },
     },
-    Test: {
-      screen: TestScreen,
+    Notifications: {
+      screen: NotificationPage,
+      navigationOptions: {
+        title: 'Notifications',
+      },
+    },
+    News: {
+      screen: NewsPage,
+      navigationOptions: {
+        title: 'News',
+      },
     },
   },
   {
-    initialRouteName: 'English to German',
-    contentOptions: {
-      activeTintColor: '#e90063',
-    },
-    tabBarOptions: {
-      labelStyle: {
-        fontSize: 14,
-      },
-      style: {
-        backgroundColor: '#128C7E',
-      },
-    },
+    drawerPosition: 'left',
+    contentComponent: CustomDrawerNavigation,
+    drawerOpenRoute: 'DrawerOpen',
+    drawerCloseRoute: 'DrawerClose',
+    drawerToggleRoute: 'DrawerToggle',
+    drawerWidth: (width / 3) * 2,
   },
 );
 
-const AppContainer = createAppContainer(AppNavigator);
+const App = createAppContainer(Drawer);
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+export default App;
