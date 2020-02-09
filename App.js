@@ -1,25 +1,28 @@
+/* eslint-disable no-alert */
+/* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import 'react-native-gesture-handler';
 import {
   Text,
   View,
   SafeAreaView,
-  ScrollView,
-  Dimensions,
   Image,
 } from 'react-native';
-import {createAppContainer} from 'react-navigation';
-import {DrawerItems, createDrawerNavigator} from 'react-navigation-drawer';
+import { NavigationContainer } from '@react-navigation/native';
+import {
+  createDrawerNavigator,
+  DrawerContentScrollView,
+  DrawerItemList,
+  DrawerItem,
+} from '@react-navigation/drawer';
 import {Icon} from 'native-base';
 import HomePage from './src/components/Page/HomePage';
 import SettingsPage from './src/components/Page/SettingsPage';
-import NotificationPage from './src/components/Page/Notifications';
-import NewsPage from './src/components/Page/News';
+import NotificationPage from './src/components/Page/NotificationsPage';
 
-const {width} = Dimensions.get('window');
+const Drawer = createDrawerNavigator();
 
-const CustomDrawerNavigation = props => {
+function CustomDrawerContent(props) {
   return (
     <SafeAreaView style={{flex: 1}}>
       <View style={{height: 250, backgroundColor: '#d2d2d2', opacity: 0.9}}>
@@ -45,9 +48,10 @@ const CustomDrawerNavigation = props => {
           <Text>John Doe</Text>
         </View>
       </View>
-      <ScrollView>
-        <DrawerItems {...props} />
-      </ScrollView>
+      <DrawerContentScrollView {...props}>
+        <DrawerItemList {...props} />
+        <DrawerItem label="Help" onPress={() => alert('Link to help')} />
+      </DrawerContentScrollView>
       <View style={{alignItems: 'center', bottom: 20}}>
         <View style={{flexDirection: 'row'}}>
           <View style={{flexDirection: 'column', marginRight: 15}}>
@@ -68,45 +72,29 @@ const CustomDrawerNavigation = props => {
       </View>
     </SafeAreaView>
   );
-};
+}
 
-const Drawer = createDrawerNavigator(
-  {
-    Home: {
-      screen: HomePage,
-      navigationOptions: {
-        title: 'Homepage',
-      },
-    },
-    Settings: {
-      screen: SettingsPage,
-      navigationOptions: {
-        title: 'Settings',
-      },
-    },
-    Notifications: {
-      screen: NotificationPage,
-      navigationOptions: {
-        title: 'Notifications',
-      },
-    },
-    News: {
-      screen: NewsPage,
-      navigationOptions: {
-        title: 'News',
-      },
-    },
-  },
-  {
-    drawerPosition: 'left',
-    contentComponent: CustomDrawerNavigation,
-    drawerOpenRoute: 'DrawerOpen',
-    drawerCloseRoute: 'DrawerClose',
-    drawerToggleRoute: 'DrawerToggle',
-    drawerWidth: (width / 3) * 2,
-  },
-);
+function MyDrawer() {
+  return (
+    <Drawer.Navigator
+      initialRouteName="Home"
+      drawerPosition="left"
+      drawerContent={props => CustomDrawerContent(props)}
+      drawerStyle={{
+        backgroundColor: '#c6cbef',
+        width: 240,
+    }}>
+      <Drawer.Screen name="Home" component={HomePage} />
+      <Drawer.Screen name="Settings" component={SettingsPage} />
+      <Drawer.Screen name="Notification" component={NotificationPage} />
+    </Drawer.Navigator>
+  );
+}
 
-const App = createAppContainer(Drawer);
-
-export default App;
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MyDrawer />
+    </NavigationContainer>
+  );
+}

@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import {View, Text, TextInput, Button} from 'react-native';
 import styles from './Style';
 
-var english_german = require('./db/english_german.json');
-
 export default class Homescreen extends Component {
   constructor(props) {
     super(props);
@@ -45,11 +43,8 @@ export default class Homescreen extends Component {
 
   showMeaning() {
     let toLower = this.state.input.toLowerCase();
-    var meaning =
-      toLower in english_german ? english_german[toLower] : 'Not Found';
-
     this.setState({
-      output: meaning,
+      output: toLower,
     });
   }
 }

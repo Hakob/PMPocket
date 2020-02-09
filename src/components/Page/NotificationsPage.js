@@ -3,10 +3,11 @@ import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon} from 'native-base';
-class HomePage extends Component {
+
+class NotificationPage extends Component {
   static navigationOptions = {
     drawerIcon: ({tintColor}) => (
-      <Icon name="home" style={{fontSize: 24, color: tintColor}} />
+      <Icon name="notifications" style={{fontSize: 24, color: tintColor}} />
     ),
   };
 
@@ -23,7 +24,7 @@ class HomePage extends Component {
           }
         />
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>Home Page</Text>
+          <Text>Notification Page</Text>
         </View>
       </View>
     );
@@ -36,4 +37,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomePage;
+export default NotificationPage;
