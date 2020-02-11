@@ -73,7 +73,7 @@ class SettingsPage extends Component {
               justifyContent: 'center',
               width: 200,
             }}>
-            <Text>Settings Page</Text>
+            {/* <Text>Settings Page</Text> */}
           </View>
         </Container>
       </TouchableWithoutFeedback>

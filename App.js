@@ -18,7 +18,7 @@ import {
 import {Icon} from 'native-base';
 import HomePage from './src/components/Page/HomePage';
 import SettingsPage from './src/components/Page/SettingsPage';
-import NotificationPage from './src/components/Page/NotificationsPage';
+// import NotificationPage from './src/components/Page/NotificationsPage';
 
 const Drawer = createDrawerNavigator();
 
@@ -34,7 +34,7 @@ function CustomDrawerContent(props) {
             justifyContent: 'center',
           }}>
           <Image
-            source={require('./src/assets/no-image.png')}
+            source={require('./src/assets/Fuchs.png')}
             style={{height: 150, width: 150, borderRadius: 60}}
           />
         </View>
@@ -45,7 +45,7 @@ function CustomDrawerContent(props) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text>John Doe</Text>
+          <Text>PM POCKET</Text>
         </View>
       </View>
       <DrawerContentScrollView {...props}>
@@ -77,21 +77,21 @@ function CustomDrawerContent(props) {
 function MyDrawer() {
   return (
     <Drawer.Navigator
-      initialRouteName="Home"
+      initialRouteName="German To English"
       drawerPosition="left"
       drawerContent={props => CustomDrawerContent(props)}
       drawerStyle={{
         backgroundColor: '#c6cbef',
         width: 240,
     }}>
-      <Drawer.Screen name="Home" component={HomePage} />
-      <Drawer.Screen name="Settings" component={SettingsPage} />
-      <Drawer.Screen name="Notification" component={NotificationPage} />
+      <Drawer.Screen name="German To English" component={HomePage} />
+      <Drawer.Screen name="English To German" component={SettingsPage} />
     </Drawer.Navigator>
   );
 }
 
 export default function App() {
+  console.disableYellowBox = true;
   return (
     <NavigationContainer>
       <MyDrawer />
