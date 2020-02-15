@@ -36,7 +36,7 @@ class HomePage extends Component {
     // const {search} = this.state;
     return (
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
-        <Container style={styles.container}>
+        <Container>
           <Header
             containerStyle={{flex: 0.4}}
             backgroundColor="#ed6b0bf0"
@@ -81,12 +81,6 @@ class HomePage extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   iconStyle: {
     color: 'white',
   },
