@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, Text, Keyboard, TextInput} from 'react-native';
+import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
 var SQLite = require('react-native-sqlite-storage');
@@ -30,7 +31,7 @@ export default class SearchBox extends React.Component {
             WHEN \`name\` LIKE '%${text}' THEN 3
             ELSE 2
           END
-        LIMIT 10`,
+        LIMIT 8`,
         [],
         (tx, results) => {
           let temp = [];
@@ -53,24 +54,30 @@ export default class SearchBox extends React.Component {
         autoCorrect={false}
         style={styles.TextInputStyleClass}
         containerStyle={styles.autocompleteContainer}
+        inputContainerStyle={styles.completeContainer}
         data={this.state.DBItems}
         defaultValue={searchedText}
         onChangeText={text => {
           this.updateDBItems(text);
         }}
-        placeholder="Enter your word here..."
         renderTextInput={props => {
           return (
-            <TextInput
-              blurOnSubmit={true}
-              onFocus={() => {
+            <SearchBar
+              placeholder="Search here"
+              onPressToFocus={true}
+              onPress={() => {
                 this.updateDBItems(this.state.searchedText);
               }}
               onBlur={() => {
                 this.setState({DBItems: []});
               }}
+              onChangeText={text => {
+                this.updateDBItems(text);
+              }}
               underlineColorAndroid="transparent"
-              {...props}
+              onPressCancel={() => {
+                this.setState({searchedText: ''});
+              }}
             />
           );
         }}
@@ -96,84 +103,23 @@ export default class SearchBox extends React.Component {
 
 const styles = StyleSheet.create({
   TextInputStyleClass: {
-    // Setting up Hint Align center.
     textAlign: 'center',
-
-    // Setting up TextInput height as 50 pixel.
-    height: 50,
-
-    // Set border width.
-    borderWidth: 2,
-
-    // Set border Hex Color Code Here.
-    borderColor: '#FF5722',
-
-    // Set border Radius.
+    height: 40,
     borderRadius: 20,
-
-    //Set background color of Text Input.
     backgroundColor: '#FFFFFF',
   },
-  searchSection: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  searchIcon: {
-    padding: 10,
-  },
-  input: {
-    flex: 1,
-    paddingTop: 10,
-    paddingRight: 10,
-    paddingBottom: 10,
-    paddingLeft: 0,
-    backgroundColor: '#fff',
-    color: '#424242',
-  },
-  container: {
-    backgroundColor: '#F5FCFF',
-    flex: 1,
-    paddingTop: 25,
+  completeContainer: {
+    width: 400,
+    borderWidth: 0,
   },
   autocompleteContainer: {
-    flex: 1,
-    left: 0,
-    position: 'absolute',
-    right: 0,
-    top: 0,
-    zIndex: 1,
+    height: 10,
+    borderWidth: 0,
+    top: 100,
   },
   itemText: {
     fontSize: 15,
     margin: 2,
     color: 'black',
-  },
-  descriptionContainer: {
-    // `backgroundColor` needs to be set otherwise the
-    // autocomplete input will disappear on text input.
-    backgroundColor: '#F5FCFF',
-    marginTop: 25,
-  },
-  infoText: {
-    textAlign: 'center',
-  },
-  titleText: {
-    fontSize: 18,
-    fontWeight: '500',
-    marginBottom: 10,
-    marginTop: 10,
-    textAlign: 'center',
-  },
-  directorText: {
-    color: 'grey',
-    fontSize: 12,
-    marginBottom: 10,
-    textAlign: 'center',
-  },
-  openingText: {
-    textAlign: 'center',
   },
 });
