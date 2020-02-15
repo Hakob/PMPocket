@@ -16,17 +16,20 @@ var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
 
 class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      chosenWordId: '',
+    };
+  }
   tableName = 'germanwords';
   static navigationOptions = {
     drawerIcon: ({tintColor}) => (
       <Icon name="settings" style={{fontSize: 24, color: tintColor}} />
     ),
   };
-  state = {
-    chosenWord: '',
-  };
   callbackFunction = childData => {
-    this.setState({chosenWord: childData});
+    this.setState({chosenWordId: childData});
   };
 
   render() {
@@ -42,10 +45,6 @@ class HomePage extends Component {
             centerContainerStyle={{flex: 2}}
             centerComponent={
               <SearchBox
-                style={{
-                  flex: 1,
-                  bottom: 20,
-                }}
                 fromTo={this.tableName}
                 parentCallback={this.callbackFunction}
               />
@@ -73,7 +72,7 @@ class HomePage extends Component {
               justifyContent: 'center',
               width: 200,
             }}>
-            {/* <Text>Coming Soon</Text> */}
+            <Text>{this.state.chosenWordId}</Text>
           </View>
         </Container>
       </TouchableWithoutFeedback>

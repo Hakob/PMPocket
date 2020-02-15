@@ -1,12 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  Keyboard,
-  TextInput,
-} from 'react-native';
+import {StyleSheet, Text, Keyboard, TextInput} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
@@ -56,6 +51,7 @@ export default class SearchBox extends React.Component {
       <Autocomplete
         autoCapitalize="none"
         autoCorrect={false}
+        style={styles.TextInputStyleClass}
         containerStyle={styles.autocompleteContainer}
         data={this.state.DBItems}
         defaultValue={searchedText}
@@ -99,6 +95,25 @@ export default class SearchBox extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  TextInputStyleClass: {
+    // Setting up Hint Align center.
+    textAlign: 'center',
+
+    // Setting up TextInput height as 50 pixel.
+    height: 50,
+
+    // Set border width.
+    borderWidth: 2,
+
+    // Set border Hex Color Code Here.
+    borderColor: '#FF5722',
+
+    // Set border Radius.
+    borderRadius: 20,
+
+    //Set background color of Text Input.
+    backgroundColor: '#FFFFFF',
+  },
   searchSection: {
     flex: 1,
     flexDirection: 'row',
