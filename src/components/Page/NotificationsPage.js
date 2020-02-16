@@ -1,32 +1,18 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import {Header} from 'react-native-elements';
-import {Icon} from 'native-base';
+import {Text, StyleSheet} from 'react-native';
 
-class NotificationPage extends Component {
-  static navigationOptions = {
-    drawerIcon: ({tintColor}) => (
-      <Icon name="notifications" style={{fontSize: 24, color: tintColor}} />
-    ),
-  };
-
+export default class SafeText extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+    };
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Header
-          rightComponent={
-            <Icon
-              name="menu"
-              type="SimpleLineIcons"
-              onPress={() => this.props.navigation.openDrawer()}
-            />
-          }
-        />
-        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-          <Text>Notification Page</Text>
-        </View>
-      </View>
+      <Text style={styles.container} onPress={this.onPressTitle}>
+        {this.state.text}
+      </Text>
     );
   }
 }
@@ -36,5 +22,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export default NotificationPage;
