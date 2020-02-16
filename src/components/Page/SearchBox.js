@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {StyleSheet, Text, Keyboard, TextInput} from 'react-native';
+import {StyleSheet, Text, Keyboard} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
@@ -31,7 +31,7 @@ export default class SearchBox extends React.Component {
             WHEN \`name\` LIKE '%${text}' THEN 3
             ELSE 2
           END
-        LIMIT 8`,
+        LIMIT 5`,
         [],
         (tx, results) => {
           let temp = [];
@@ -54,6 +54,7 @@ export default class SearchBox extends React.Component {
         autoCorrect={false}
         style={styles.TextInputStyleClass}
         containerStyle={styles.autocompleteContainer}
+        listContainerStyle={styles.listContainerStyle}
         inputContainerStyle={styles.completeContainer}
         data={this.state.DBItems}
         defaultValue={searchedText}
@@ -108,8 +109,12 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     backgroundColor: '#FFFFFF',
   },
+  listContainerStyle: {
+    height: 150,
+    zIndex: 1,
+  },
   completeContainer: {
-    width: 400,
+    width: 370,
     borderWidth: 0,
   },
   autocompleteContainer: {
@@ -118,7 +123,8 @@ const styles = StyleSheet.create({
     top: 100,
   },
   itemText: {
-    fontSize: 15,
+    textAlign: 'center',
+    fontSize: 16,
     margin: 2,
     color: 'black',
   },

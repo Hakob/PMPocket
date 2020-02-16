@@ -4,6 +4,8 @@ import {
   Image,
   View,
   Text,
+  SafeAreaView,
+  FlatList,
   StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,
@@ -15,11 +17,20 @@ import SearchBox from './SearchBox';
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
 
+function Item({title}) {
+  return (
+    <View style={styles.item}>
+      <Text style={styles.title}>{title}</Text>
+    </View>
+  );
+}
+
 class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       chosenWordId: '',
+      translated: [],
     };
   }
   tableName = 'germanwords';
@@ -30,15 +41,31 @@ class HomePage extends Component {
   };
   callbackFunction = childData => {
     this.setState({chosenWordId: childData});
+    db.transaction(tx => {
+      tx.executeSql(
+        `SELECT english_id AS id, name AS title
+          FROM ManyToMany AS mtm
+          INNER JOIN englishwords AS ew
+          ON mtm.english_id = ew.id
+        WHERE german_id == ${this.state.chosenWordId}`,
+        [],
+        (tx, results) => {
+          let temp = [];
+          for (let i = 0; i < results.rows.length; ++i) {
+            temp.push(results.rows.item(i));
+          }
+          this.setState({translated: temp});
+        },
+      );
+    });
   };
 
   render() {
-    // const {search} = this.state;
     return (
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <Container>
           <Header
-            containerStyle={{flex: 0.4}}
+            containerStyle={{flex: 0.6}}
             backgroundColor="#ed6b0bf0"
             rightContainerStyle={{flex: 1, right: 10, bottom: 10}}
             // placement="right"
@@ -52,14 +79,14 @@ class HomePage extends Component {
             leftComponent={
               <Image
                 source={require('../../assets/logo-weiss.png')}
-                style={{width: 100, height: 50, left: 10, bottom: 70}}
+                style={{width: 100, height: 50, left: 10, bottom: 100}}
               />
             }
             rightComponent={
               <Icon
                 name="menu"
                 type="SimpleLineIcons"
-                style={{bottom: 70}}
+                style={{bottom: 100}}
                 iconStyle={styles.iconStyle}
                 onPress={() => this.props.navigation.openDrawer()}
               />
@@ -68,11 +95,36 @@ class HomePage extends Component {
           <View
             style={{
               flex: 1,
-              alignItems: 'center',
               justifyContent: 'center',
-              width: 200,
             }}>
-            <Text>{this.state.chosenWordId}</Text>
+            <View style={{flex: 0.4, backgroundColor: 'skyblue'}}>
+              <Text
+                style={{
+                  left: 20,
+                  fontStyle: 'italic',
+                  fontSize: 20,
+                }}>
+                English Translation:
+              </Text>
+            </View>
+            <View style={{height: 1, backgroundColor: '#ed6b0bf0'}} />
+            <View style={{flex: 1, backgroundColor: 'steelblue'}}>
+              <Text
+                style={{
+                  left: 20,
+                  fontStyle: 'italic',
+                  fontSize: 20,
+                }}>
+                Related Words:
+              </Text>
+              <SafeAreaView>
+                <FlatList
+                  data={this.state.translated}
+                  renderItem={({item}) => <Item title={item.title} />}
+                  keyExtractor={item => item.id}
+                />
+              </SafeAreaView>
+            </View>
           </View>
         </Container>
       </TouchableWithoutFeedback>
@@ -81,6 +133,21 @@ class HomePage extends Component {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  item: {
+    backgroundColor: '#f9c2ff',
+    padding: 20,
+    marginVertical: 8,
+    marginHorizontal: 16,
+  },
+  title: {
+    fontSize: 20,
+  },
   iconStyle: {
     color: 'white',
   },
