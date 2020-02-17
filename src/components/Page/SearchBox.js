@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, Text, Keyboard} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
@@ -33,7 +32,7 @@ export default class SearchBox extends React.Component {
           END
         LIMIT 5`,
         [],
-        (tx, results) => {
+        (_, results) => {
           let temp = [];
           for (let i = 0; i < results.rows.length; ++i) {
             temp.push(results.rows.item(i));

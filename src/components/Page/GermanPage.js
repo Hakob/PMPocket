@@ -10,8 +10,8 @@ import {
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
-import {Header, SearchBar} from 'react-native-elements';
-import {Left, Right, Icon, Container} from 'native-base';
+import {Header} from 'react-native-elements';
+import {Icon, Container} from 'native-base';
 import SearchBox from './SearchBox';
 
 var SQLite = require('react-native-sqlite-storage');
@@ -25,7 +25,7 @@ function Item({title}) {
   );
 }
 
-class HomePage extends Component {
+export default class GermanPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -49,7 +49,7 @@ class HomePage extends Component {
           ON mtm.english_id = ew.id
         WHERE german_id == ${this.state.chosenWordId}`,
         [],
-        (tx, results) => {
+        (_, results) => {
           let temp = [];
           for (let i = 0; i < results.rows.length; ++i) {
             temp.push(results.rows.item(i));
@@ -68,8 +68,6 @@ class HomePage extends Component {
             containerStyle={{flex: 0.6}}
             backgroundColor="#ed6b0bf0"
             rightContainerStyle={{flex: 1, right: 10, bottom: 10}}
-            // placement="right"
-            centerContainerStyle={{flex: 2}}
             centerComponent={
               <SearchBox
                 fromTo={this.tableName}
@@ -162,5 +160,3 @@ const styles = StyleSheet.create({
     color: 'white',
   },
 });
-
-export default HomePage;

@@ -16,8 +16,8 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import {Icon} from 'native-base';
-import HomePage from './src/components/Page/HomePage';
-import SettingsPage from './src/components/Page/SettingsPage';
+import GermanPage from './src/components/Page/GermanPage';
+import EnglishPage from './src/components/Page/EnglishPage';
 // import NotificationPage from './src/components/Page/NotificationsPage';
 
 const Drawer = createDrawerNavigator();
@@ -84,8 +84,8 @@ function MyDrawer() {
         backgroundColor: '#c6cbef',
         width: 240,
     }}>
-      <Drawer.Screen name="German To English" component={HomePage} />
-      <Drawer.Screen name="English To German" component={SettingsPage} />
+      <Drawer.Screen name="German To English" component={GermanPage} />
+      <Drawer.Screen name="English To German" component={EnglishPage} />
     </Drawer.Navigator>
   );
 }
