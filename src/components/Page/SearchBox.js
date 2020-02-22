@@ -6,6 +6,8 @@ import Autocomplete from 'react-native-autocomplete-input';
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
 
+var searchRef = null;
+
 export default class SearchBox extends React.Component {
   constructor(props) {
     super(props);
@@ -46,7 +48,6 @@ export default class SearchBox extends React.Component {
     });
   }
   render() {
-    const {searchedText} = this.state;
     return (
       <Autocomplete
         autoCapitalize="none"
@@ -56,13 +57,15 @@ export default class SearchBox extends React.Component {
         listContainerStyle={styles.listContainerStyle}
         inputContainerStyle={styles.completeContainer}
         data={this.state.DBItems}
-        defaultValue={searchedText}
         onChangeText={text => {
           this.updateDBItems(text);
         }}
         renderTextInput={props => {
           return (
             <SearchBar
+              ref={c => {
+                searchRef = c;
+              }}
               placeholder="Search here"
               onPressToFocus={true}
               onPress={() => {
@@ -73,10 +76,12 @@ export default class SearchBox extends React.Component {
               }}
               onChangeText={text => {
                 this.updateDBItems(text);
+                searchRef.setState({value: text});
               }}
               underlineColorAndroid="transparent"
               onPressCancel={() => {
                 this.setState({searchedText: ''});
+                searchRef.setState({value: ''});
               }}
             />
           );
@@ -91,6 +96,7 @@ export default class SearchBox extends React.Component {
                   searchedText: item.name,
                   DBItems: [],
                 });
+                searchRef.setState({value: item.name});
               }}>
               <Text style={styles.itemText}>{item.name}</Text>
             </TouchableOpacity>

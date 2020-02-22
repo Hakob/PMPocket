@@ -18,7 +18,7 @@ import {
 import {Icon} from 'native-base';
 import GermanPage from './src/components/Page/GermanPage';
 import EnglishPage from './src/components/Page/EnglishPage';
-// import NotificationPage from './src/components/Page/NotificationsPage';
+import WelcomePage from './src/components/Page/WelcomePage';
 
 const Drawer = createDrawerNavigator();
 
@@ -77,13 +77,14 @@ function CustomDrawerContent(props) {
 function MyDrawer() {
   return (
     <Drawer.Navigator
-      initialRouteName="German To English"
+      initialRouteName="Welcome"
       drawerPosition="left"
       drawerContent={props => CustomDrawerContent(props)}
       drawerStyle={{
         backgroundColor: '#c6cbef',
         width: 240,
     }}>
+      <Drawer.Screen name="Welcome" component={WelcomePage} />
       <Drawer.Screen name="German To English" component={GermanPage} />
       <Drawer.Screen name="English To German" component={EnglishPage} />
     </Drawer.Navigator>
