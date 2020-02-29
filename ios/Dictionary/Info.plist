@@ -41,6 +41,7 @@
 	<string></string>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Boton-Bold.ttf</string>
 		<string>Boton-Medium.otf</string>
 		<string>Boton-Regular.ttf</string>
 		<string>Boton-Light-Italic.otf</string>

@@ -12,6 +12,7 @@
 		0AEF25B4240A7AAC006C6B68 /* Boton-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */; };
 		0AEF25B5240A7AAC006C6B68 /* Boton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B2240A7AAB006C6B68 /* Boton-Regular.ttf */; };
 		0AEF25B7240A7EF6006C6B68 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B6240A7EF6006C6B68 /* www */; };
+		0AEF25B9240ABECD006C6B68 /* Boton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -55,6 +56,7 @@
 		0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Medium.otf"; sourceTree = "<group>"; };
 		0AEF25B2240A7AAB006C6B68 /* Boton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Regular.ttf"; sourceTree = "<group>"; };
 		0AEF25B6240A7EF6006C6B68 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = Dictionary/www; sourceTree = "<group>"; };
+		0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Dictionary/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Dictionary/AppDelegate.m; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */,
 				0AEF25B6240A7EF6006C6B68 /* www */,
 				0AEF25B0240A7AAB006C6B68 /* Boton-Light-Italic.otf */,
 				0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */,
@@ -400,6 +403,7 @@
 			files = (
 				0AEF25B7240A7EF6006C6B68 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				0AEF25B9240ABECD006C6B68 /* Boton-Bold.ttf in Resources */,
 				0AEF25B3240A7AAC006C6B68 /* Boton-Light-Italic.otf in Resources */,
 				0AEF25B5240A7AAC006C6B68 /* Boton-Regular.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
