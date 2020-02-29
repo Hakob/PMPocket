@@ -68,6 +68,7 @@ export default class GermanPage extends Component {
             containerStyle={{flex: 0.6}}
             backgroundColor="#ed6b0bf0"
             rightContainerStyle={{flex: 1, right: 10, bottom: 10}}
+            centerContainerStyle={{bottom: 150}}
             centerComponent={
               <SearchBox
                 fromTo={this.tableName}

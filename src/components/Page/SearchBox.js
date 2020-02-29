@@ -32,7 +32,7 @@ export default class SearchBox extends React.Component {
             WHEN \`name\` LIKE '%${text}' THEN 3
             ELSE 2
           END
-        LIMIT 5`,
+        LIMIT 6`,
         [],
         (_, results) => {
           let temp = [];
