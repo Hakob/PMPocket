@@ -69,6 +69,8 @@ export default class SearchBox extends React.Component {
               placeholder="Search here"
               onPressToFocus={true}
               backgroundColor="#FFEDDC"
+              fontFamily="Boton-Medium"
+              fontColor="#005e6f"
               onPress={() => {
                 this.updateDBItems(this.state.searchedText);
               }}
@@ -83,6 +85,7 @@ export default class SearchBox extends React.Component {
               onPressCancel={() => {
                 this.setState({searchedText: ''});
                 searchRef.setState({value: ''});
+                this.props.parentCallback(0);
               }}
             />
           );
@@ -131,9 +134,10 @@ const styles = StyleSheet.create({
     top: 100,
   },
   itemText: {
-    textAlign: 'center',
     fontSize: 16,
+    fontFamily: 'Boton-Regular',
     margin: 2,
-    color: 'black',
+    color: '#0099bd',
+    textAlign: 'center',
   },
 });

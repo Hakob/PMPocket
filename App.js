@@ -19,6 +19,7 @@ import {Icon} from 'native-base';
 import GermanPage from './src/components/Page/GermanPage';
 import EnglishPage from './src/components/Page/EnglishPage';
 import WelcomePage from './src/components/Page/WelcomePage';
+import ImprintPage from './src/components/Page/ImprintPage';
 
 const Drawer = createDrawerNavigator();
 
@@ -34,8 +35,8 @@ function CustomDrawerContent(props) {
             justifyContent: 'center',
           }}>
           <Image
-            source={require('./src/assets/Fuchs.png')}
-            style={{height: 150, width: 150, borderRadius: 60}}
+            source={require('./src/assets/Fuchs_trans.png')}
+            style={{height: 150, width: 150}}
           />
         </View>
         <View
@@ -45,31 +46,13 @@ function CustomDrawerContent(props) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text>PM POCKET</Text>
+          <Text style={{fontFamily: 'Boton-Bold'}}>PM POCKET</Text>
         </View>
       </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
-        <DrawerItem label="Help" onPress={() => alert('Link to help')} />
+        {/* <DrawerItem label="Help" onPress={() => alert('Link to help')} /> */}
       </DrawerContentScrollView>
-      <View style={{alignItems: 'center', bottom: 20}}>
-        <View style={{flexDirection: 'row'}}>
-          <View style={{flexDirection: 'column', marginRight: 15}}>
-            <Icon
-              name="flask"
-              style={{fontSize: 24}}
-              onPress={() => console.log('Tıkladın')}
-            />
-          </View>
-          <View style={{flexDirection: 'column'}}>
-            <Icon
-              name="call"
-              style={{fontSize: 24}}
-              onPress={() => console.log('Tıkladın')}
-            />
-          </View>
-        </View>
-      </View>
     </SafeAreaView>
   );
 }
@@ -77,16 +60,17 @@ function CustomDrawerContent(props) {
 function MyDrawer() {
   return (
     <Drawer.Navigator
-      initialRouteName="Welcome"
+      initialRouteName="Info"
       drawerPosition="left"
       drawerContent={props => CustomDrawerContent(props)}
       drawerStyle={{
         backgroundColor: '#c6cbef',
         width: 240,
     }}>
-      <Drawer.Screen name="Welcome" component={WelcomePage} />
+      <Drawer.Screen name="Info" component={WelcomePage} />
       <Drawer.Screen name="German To English" component={GermanPage} />
       <Drawer.Screen name="English To German" component={EnglishPage} />
+      <Drawer.Screen name="Imprint" component={ImprintPage} />
     </Drawer.Navigator>
   );
 }
