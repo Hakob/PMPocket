@@ -52,10 +52,10 @@ export default class SearchBox extends React.Component {
       <Autocomplete
         autoCapitalize="none"
         autoCorrect={false}
-        style={styles.TextInputStyleClass}
         containerStyle={styles.autocompleteContainer}
         listContainerStyle={styles.listContainerStyle}
-        inputContainerStyle={styles.completeContainer}
+        listStyle={styles.listStyle}
+        inputContainerStyle={styles.inputContainerStyle}
         data={this.state.DBItems}
         onChangeText={text => {
           this.updateDBItems(text);
@@ -68,6 +68,7 @@ export default class SearchBox extends React.Component {
               }}
               placeholder="Search here"
               onPressToFocus={true}
+              backgroundColor="#FFEDDC"
               onPress={() => {
                 this.updateDBItems(this.state.searchedText);
               }}
@@ -112,13 +113,15 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     height: 40,
     borderRadius: 20,
-    backgroundColor: '#FFFFFF',
   },
   listContainerStyle: {
     height: 150,
+  },
+  listStyle: {
+    backgroundColor: '#FFEDDC',
     zIndex: 1,
   },
-  completeContainer: {
+  inputContainerStyle: {
     width: 370,
     borderWidth: 0,
   },
