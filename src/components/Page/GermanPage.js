@@ -9,6 +9,8 @@ import {
   StyleSheet,
   TouchableWithoutFeedback,
   Keyboard,
+  Linking,
+  TouchableOpacity,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -76,18 +78,24 @@ export default class GermanPage extends Component {
               />
             }
             leftComponent={
-              <Image
-                source={require('../../assets/logo-weiss.png')}
-                style={{width: 100, height: 50, left: 10, bottom: 100}}
-              />
+              <TouchableOpacity
+                style={{left: 10, bottom: 100}}
+                onPress={() => Linking.openURL('https://pm-pocket.de')}>
+                <Image
+                  source={require('../../assets/logo-weiss.png')}
+                  style={{width: 100, height: 50}}
+                />
+              </TouchableOpacity>
             }
             rightComponent={
               <Icon
                 name="menu"
                 type="SimpleLineIcons"
-                style={{bottom: 100}}
-                iconStyle={styles.iconStyle}
-                onPress={() => this.props.navigation.openDrawer()}
+                style={{bottom: 100, color: 'white'}}
+                onPress={() => {
+                  Keyboard.dismiss();
+                  this.props.navigation.openDrawer();
+                }}
               />
             }
           />
@@ -99,10 +107,11 @@ export default class GermanPage extends Component {
             <View style={{flex: 0.4}}>
               <Text
                 style={{
-                  top: 10,
+                  top: 20,
                   left: 25,
-                  fontStyle: 'italic',
-                  fontSize: 20,
+                  color: '#005e6f',
+                  fontFamily: 'Boton-Light-Italic',
+                  fontSize: 24,
                 }}>
                 English Translation:
               </Text>
@@ -119,10 +128,11 @@ export default class GermanPage extends Component {
             <View style={{flex: 1}}>
               <Text
                 style={{
-                  top: 10,
+                  top: 20,
                   left: 25,
-                  fontStyle: 'italic',
-                  fontSize: 20,
+                  color: '#005e6f',
+                  fontFamily: 'Boton-Light-Italic',
+                  fontSize: 24,
                 }}>
                 Related Words:
               </Text>
@@ -155,9 +165,9 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   title: {
+    left: 10,
+    color: '#005e6f',
+    fontFamily: 'Boton-Medium',
     fontSize: 20,
-  },
-  iconStyle: {
-    color: 'white',
   },
 });

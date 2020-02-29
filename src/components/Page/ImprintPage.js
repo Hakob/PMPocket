@@ -11,12 +11,12 @@ import {
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
 
-export default class WelcomePage extends Component {
+export default class ImprintPage extends Component {
   render() {
     return (
       <Container>
         <Header
-          containerStyle={{flex: 0.8}}
+          containerStyle={{flex: 0.32}}
           backgroundColor="#ed6b0bf0"
           rightContainerStyle={{right: 10}}
           leftComponent={
@@ -40,42 +40,35 @@ export default class WelcomePage extends Component {
         />
         <View style={{flex: 1, backgroundColor: '#eb6e0830'}}>
           <SafeAreaView
-            style={{flex: 1, marginVertical: 20, flexDirection: 'row'}}>
+            style={{flex: 1, marginVertical: 20, flexDirection: 'column'}}>
             <Text
               style={{
-                flex: 2,
+                flex: 1,
                 color: '#005e6f',
                 fontFamily: 'Boton-Medium',
                 fontSize: 25,
                 left: 30,
                 top: 30,
-                lineHeight: 40,
               }}>
-              Your personal{'\n'}project management{'\n'}Dictionary!
+              Imprint
             </Text>
-            <Image
-              source={require('../../assets/Fuchs_trans.png')}
-              style={{flex: 1, width: 100, height: 130, top: 25}}
-            />
+            <Text
+              style={{
+                flex: 3,
+                color: '#005e6f',
+                fontFamily: 'Boton-Regular',
+                fontSize: 20,
+                left: 30,
+              }}>
+              Dr. Martina Albrecht{'\n'}Platzhalter{'\n'}Dae cus, occullibusa
+              volesti nulparibus.{'\n'}
+              {'\n'}Unt, simet fugit quatum et rem as ut{'\n'}assinctiaes
+              preptius qui solumquia que consedita que con rem secti sam{'\n'}
+              harcipist elia con pelit{'\n'}
+              {'\n'}que vendam, eos doluptis aces{'\n'}alitemquam remolorem
+              nimin cora{'\n'}aspicab or
+            </Text>
           </SafeAreaView>
-        </View>
-        <View
-          style={{
-            flex: 1.5,
-            backgroundColor: '#ed6b0bf0',
-            flexDirection: 'column-reverse',
-          }}>
-          <Text
-            style={{
-              fontFamily: 'Boton-Medium',
-              fontSize: 15,
-              color: '#FFEDDC',
-              top: 52,
-              left: 30,
-            }}>
-            Dr. Martina Albrecht{'\n'}a@m Advisory GmbH{'\n'}Friedrichstraße 95
-            POB 63{'\n'}10117 Berlin{'\n'}www.pm-pocket.de
-          </Text>
         </View>
       </Container>
     );
