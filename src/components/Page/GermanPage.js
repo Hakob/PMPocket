@@ -69,7 +69,7 @@ export default class GermanPage extends Component {
           <Header
             containerStyle={{flex: 0.6}}
             backgroundColor="#ed6b0bf0"
-            rightContainerStyle={{flex: 1, right: 10, bottom: 10}}
+            rightContainerStyle={{flex: 1, right: 20, bottom: 10}}
             centerContainerStyle={{bottom: 150}}
             centerComponent={
               <SearchBox
@@ -79,7 +79,7 @@ export default class GermanPage extends Component {
             }
             leftComponent={
               <TouchableOpacity
-                style={{left: 10, bottom: 100}}
+                style={{left: 20, bottom: 100}}
                 onPress={() => Linking.openURL('https://pm-pocket.de')}>
                 <Image
                   source={require('../../assets/logo-weiss.png')}

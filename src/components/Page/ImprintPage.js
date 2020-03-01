@@ -16,12 +16,12 @@ export default class ImprintPage extends Component {
     return (
       <Container>
         <Header
-          containerStyle={{flex: 0.32}}
+          containerStyle={{flex: 0.4}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{right: 10}}
+          rightContainerStyle={{right: 20}}
           leftComponent={
             <TouchableOpacity
-              style={{left: 10, bottom: 50}}
+              style={{left: 40, bottom: 50}}
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
               <Image
                 source={require('../../assets/logo-weiss.png')}
@@ -48,9 +48,10 @@ export default class ImprintPage extends Component {
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
                 fontWeight: '400',
-                fontSize: 25,
-                left: 30,
-                top: 30,
+                fontSize: 40,
+                left: 60,
+                top: 70,
+                lineHeight: 50,
               }}>
               Imprint
             </Text>
@@ -62,15 +63,17 @@ export default class ImprintPage extends Component {
                 fontStyle: 'normal',
                 fontWeight: '300',
                 fontSize: 20,
-                left: 30,
+                left: 60,
+                top: 10,
+                lineHeight: 30,
               }}>
               Dr. Martina Albrecht{'\n'}Platzhalter{'\n'}Dae cus, occullibusa
               volesti nulparibus.{'\n'}
               {'\n'}Unt, simet fugit quatum et rem as ut{'\n'}assinctiaes
-              preptius qui solumquia que consedita que con rem secti sam{'\n'}
+              preptius qui solumquia que consedita{'\n'}que con rem secti sam
               harcipist elia con pelit{'\n'}
-              {'\n'}que vendam, eos doluptis aces{'\n'}alitemquam remolorem
-              nimin cora{'\n'}aspicab or
+              {'\n'}que vendam, eos doluptis aces alitemquam re-{'\n'}molorem
+              nimin cora aspicab or
             </Text>
           </SafeAreaView>
         </View>

@@ -18,10 +18,10 @@ export default class WelcomePage extends Component {
         <Header
           containerStyle={{flex: 0.8}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{right: 10}}
+          rightContainerStyle={{right: 20, top: 22}}
           leftComponent={
             <TouchableOpacity
-              style={{left: 10, bottom: 50}}
+              style={{left: 20, bottom: 22}}
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
               <Image
                 source={require('../../assets/logo-weiss.png')}
@@ -48,16 +48,16 @@ export default class WelcomePage extends Component {
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
                 fontWeight: '400',
-                fontSize: 25,
-                left: 30,
-                top: 30,
-                lineHeight: 40,
+                fontSize: 45,
+                left: 40,
+                top: 50,
+                lineHeight: 63,
               }}>
               Your personal{'\n'}project management{'\n'}Dictionary!
             </Text>
             <Image
               source={require('../../assets/Fuchs_trans.png')}
-              style={{flex: 1, width: 100, height: 130, top: 25}}
+              style={{flex: 1, width: 250, height: 250, top: 20}}
             />
           </SafeAreaView>
         </View>
@@ -72,10 +72,10 @@ export default class WelcomePage extends Component {
               fontFamily: 'Boton',
               fontStyle: 'normal',
               fontWeight: '300',
-              fontSize: 15,
+              fontSize: 20,
               color: '#FFEDDC',
-              top: 52,
-              left: 30,
+              top: 60,
+              left: 50,
             }}>
             Dr. Martina Albrecht{'\n'}a@m Advisory GmbH{'\n'}Friedrichstraße 95
             POB 63{'\n'}10117 Berlin{'\n'}www.pm-pocket.de
