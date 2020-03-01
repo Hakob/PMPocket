@@ -8,20 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DictionaryTests.m */; };
-		0AEF25B3240A7AAC006C6B68 /* Boton-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B0240A7AAB006C6B68 /* Boton-Light-Italic.otf */; };
-		0AEF25B4240A7AAC006C6B68 /* Boton-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */; };
-		0AEF25B5240A7AAC006C6B68 /* Boton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B2240A7AAB006C6B68 /* Boton-Regular.ttf */; };
 		0AEF25B7240A7EF6006C6B68 /* www in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B6240A7EF6006C6B68 /* www */; };
-		0AEF25B9240ABECD006C6B68 /* Boton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1459533E325644169DAB6C46 /* Boton-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4ADBAA4DFD74E34AA368BD7 /* Boton-Medium.otf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DictionaryTests.m */; };
+		50E7418CFAC24C91AF28722D /* Boton-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A46050DE8547BFAD875B01 /* Boton-LightItalic.otf */; };
 		7C198CD8FAD98B34D949F030 /* libPods-Dictionary-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E255347085D5FF790CEB7C80 /* libPods-Dictionary-tvOS.a */; };
+		A634BEE0B8BD4519B6AA1BBB /* Boton-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1497695CD5141FEB829B300 /* Boton-Light.ttf */; };
 		ADA5612D94412B26C9DDA893 /* libPods-Dictionary-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD49DF46915C6A57AB0B1532 /* libPods-Dictionary-tvOSTests.a */; };
 		D99E8DBC91B21639DB1EC67F /* libPods-DictionaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A26B370DF7E54D2AE4FBB4D4 /* libPods-DictionaryTests.a */; };
 		E9646C31D7ABDA67A8D7A4A6 /* libPods-Dictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07777710F08AD376DDED6876 /* libPods-Dictionary.a */; };
@@ -52,11 +51,7 @@
 		02704A1C74664CAE89FC2B61 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		07777710F08AD376DDED6876 /* libPods-Dictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08C68A81D127429C95D1111B /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
-		0AEF25B0240A7AAB006C6B68 /* Boton-Light-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Light-Italic.otf"; sourceTree = "<group>"; };
-		0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Medium.otf"; sourceTree = "<group>"; };
-		0AEF25B2240A7AAB006C6B68 /* Boton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Regular.ttf"; sourceTree = "<group>"; };
 		0AEF25B6240A7EF6006C6B68 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = Dictionary/www; sourceTree = "<group>"; };
-		0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Boton-Bold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Dictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Dictionary/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Dictionary/AppDelegate.m; sourceTree = "<group>"; };
@@ -86,10 +81,13 @@
 		B4427B3E76999AF43F2A00A8 /* Pods-Dictionary-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-Dictionary-tvOSTests/Pods-Dictionary-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B848610BFC28482F8B1B5E71 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		BD49DF46915C6A57AB0B1532 /* libPods-Dictionary-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dictionary-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4ADBAA4DFD74E34AA368BD7 /* Boton-Medium.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Boton-Medium.otf"; path = "../assets/fonts/Boton-Medium.otf"; sourceTree = "<group>"; };
 		CD2795775D6F42D59831C7A2 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
+		D1497695CD5141FEB829B300 /* Boton-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Boton-Light.ttf"; path = "../assets/fonts/Boton-Light.ttf"; sourceTree = "<group>"; };
 		D7E683B8EAF24A4CBCBB800C /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		DD045878648E4F7AA149D655 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
 		DDEFDE58BDE3412C91C9E705 /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
+		E0A46050DE8547BFAD875B01 /* Boton-LightItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Boton-LightItalic.otf"; path = "../assets/fonts/Boton-LightItalic.otf"; sourceTree = "<group>"; };
 		E255347085D5FF790CEB7C80 /* libPods-Dictionary-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dictionary-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E610FEE8E7F24DC4AE0EA598 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		EB181149F6BC44CD84324612 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
@@ -200,6 +198,9 @@
 				1C6DC63C450D4234AB67CD68 /* rubicon-icon-font.ttf */,
 				62B53AA7D2904570A630FDEE /* SimpleLineIcons.ttf */,
 				EB181149F6BC44CD84324612 /* Zocial.ttf */,
+				D1497695CD5141FEB829B300 /* Boton-Light.ttf */,
+				E0A46050DE8547BFAD875B01 /* Boton-LightItalic.otf */,
+				C4ADBAA4DFD74E34AA368BD7 /* Boton-Medium.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -214,11 +215,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				0AEF25B8240ABECD006C6B68 /* Boton-Bold.ttf */,
 				0AEF25B6240A7EF6006C6B68 /* www */,
-				0AEF25B0240A7AAB006C6B68 /* Boton-Light-Italic.otf */,
-				0AEF25B1240A7AAB006C6B68 /* Boton-Medium.otf */,
-				0AEF25B2240A7AAB006C6B68 /* Boton-Regular.ttf */,
 				13B07FAE1A68108700A75B9A /* Dictionary */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* DictionaryTests */,
@@ -403,11 +400,10 @@
 			files = (
 				0AEF25B7240A7EF6006C6B68 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				0AEF25B9240ABECD006C6B68 /* Boton-Bold.ttf in Resources */,
-				0AEF25B3240A7AAC006C6B68 /* Boton-Light-Italic.otf in Resources */,
-				0AEF25B5240A7AAC006C6B68 /* Boton-Regular.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				0AEF25B4240A7AAC006C6B68 /* Boton-Medium.otf in Resources */,
+				A634BEE0B8BD4519B6AA1BBB /* Boton-Light.ttf in Resources */,
+				50E7418CFAC24C91AF28722D /* Boton-LightItalic.otf in Resources */,
+				1459533E325644169DAB6C46 /* Boton-Medium.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +526,22 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Dictionary/Pods-Dictionary-resources.sh",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/AntDesign.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Entypo.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Feather.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Brands.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Foundation.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Octicons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf",
+				"${PODS_ROOT}/../../node_modules/react-native-vector-icons/Fonts/Zocial.ttf",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -732,15 +744,17 @@
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = V4LU638F7Z;
 				INFOPLIST_FILE = Dictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.Arakelyan.Martina.Dictionary;
+				PRODUCT_BUNDLE_IDENTIFIER = org.Arakelyan.Martina.BeneDict;
 				PRODUCT_NAME = Dictionary;
+				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -753,15 +767,17 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V4LU638F7Z;
 				INFOPLIST_FILE = Dictionary/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.3;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.Arakelyan.Martina.Dictionary;
+				PRODUCT_BUNDLE_IDENTIFIER = org.Arakelyan.Martina.BeneDict;
 				PRODUCT_NAME = Dictionary;
+				TARGETED_DEVICE_FAMILY = 2;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;

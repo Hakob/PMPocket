@@ -32,7 +32,7 @@ export default class SearchBox extends React.Component {
             WHEN \`name\` LIKE '%${text}' THEN 3
             ELSE 2
           END
-        LIMIT 6`,
+        LIMIT 5`,
         [],
         (_, results) => {
           let temp = [];
@@ -69,7 +69,7 @@ export default class SearchBox extends React.Component {
               placeholder="Search here"
               onPressToFocus={true}
               backgroundColor="#FFEDDC"
-              fontFamily="Boton-Medium"
+              fontFamily="Boton"
               fontColor="#005e6f"
               onPress={() => {
                 this.updateDBItems(this.state.searchedText);
@@ -135,7 +135,9 @@ const styles = StyleSheet.create({
   },
   itemText: {
     fontSize: 16,
-    fontFamily: 'Boton-Regular',
+    fontFamily: 'Boton',
+    fontStyle: 'normal',
+    fontWeight: '300',
     margin: 2,
     color: '#0099bd',
     textAlign: 'center',

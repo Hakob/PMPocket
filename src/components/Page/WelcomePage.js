@@ -45,7 +45,9 @@ export default class WelcomePage extends Component {
               style={{
                 flex: 2,
                 color: '#005e6f',
-                fontFamily: 'Boton-Medium',
+                fontFamily: 'Boton',
+                fontStyle: 'normal',
+                fontWeight: '400',
                 fontSize: 25,
                 left: 30,
                 top: 30,
@@ -67,7 +69,9 @@ export default class WelcomePage extends Component {
           }}>
           <Text
             style={{
-              fontFamily: 'Boton-Medium',
+              fontFamily: 'Boton',
+              fontStyle: 'normal',
+              fontWeight: '300',
               fontSize: 15,
               color: '#FFEDDC',
               top: 52,

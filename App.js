@@ -46,12 +46,11 @@ function CustomDrawerContent(props) {
             alignItems: 'center',
             justifyContent: 'center',
           }}>
-          <Text style={{fontFamily: 'Boton-Bold'}}>PM POCKET</Text>
+          <Text style={{fontFamily: 'Boton'}}>PM POCKET</Text>
         </View>
       </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
-        {/* <DrawerItem label="Help" onPress={() => alert('Link to help')} /> */}
       </DrawerContentScrollView>
     </SafeAreaView>
   );
@@ -64,7 +63,7 @@ function MyDrawer() {
       drawerPosition="left"
       drawerContent={props => CustomDrawerContent(props)}
       drawerStyle={{
-        backgroundColor: '#c6cbef',
+        backgroundColor: '#ed6b0b',
         width: 240,
     }}>
       <Drawer.Screen name="Info" component={WelcomePage} />

@@ -110,10 +110,12 @@ export default class EnglishPage extends Component {
                   top: 20,
                   left: 25,
                   color: '#005e6f',
-                  fontFamily: 'Boton-Light-Italic',
+                  fontFamily: 'Boton',
+                  fontStyle: 'italic',
+                  fontWeight: '400',
                   fontSize: 24,
                 }}>
-                German Translation:
+                German translation:
               </Text>
               <Item
                 title={
@@ -131,10 +133,12 @@ export default class EnglishPage extends Component {
                   top: 20,
                   left: 25,
                   color: '#005e6f',
-                  fontFamily: 'Boton-Light-Italic',
+                  fontFamily: 'Boton',
+                  fontStyle: 'italic',
+                  fontWeight: '400',
                   fontSize: 24,
                 }}>
-                Related Words:
+                Related words:
               </Text>
               <SafeAreaView>
                 <FlatList
@@ -167,7 +171,9 @@ const styles = StyleSheet.create({
   title: {
     left: 10,
     color: '#005e6f',
-    fontFamily: 'Boton-Medium',
+    fontFamily: 'Boton',
+    fontStyle: 'normal',
+    fontWeight: '500',
     fontSize: 20,
   },
 });

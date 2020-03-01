@@ -45,7 +45,9 @@ export default class ImprintPage extends Component {
               style={{
                 flex: 1,
                 color: '#005e6f',
-                fontFamily: 'Boton-Medium',
+                fontFamily: 'Boton',
+                fontStyle: 'normal',
+                fontWeight: '400',
                 fontSize: 25,
                 left: 30,
                 top: 30,
@@ -56,7 +58,9 @@ export default class ImprintPage extends Component {
               style={{
                 flex: 3,
                 color: '#005e6f',
-                fontFamily: 'Boton-Regular',
+                fontFamily: 'Boton',
+                fontStyle: 'normal',
+                fontWeight: '300',
                 fontSize: 20,
                 left: 30,
               }}>
