@@ -70,7 +70,7 @@ export default class EnglishPage extends Component {
             containerStyle={{flex: 0.6}}
             backgroundColor="#ed6b0bf0"
             rightContainerStyle={{flex: 1, right: 20, bottom: 10}}
-            centerContainerStyle={{bottom: 150}}
+            centerContainerStyle={{bottom: 120}}
             centerComponent={
               <SearchBox
                 fromTo={this.tableName}

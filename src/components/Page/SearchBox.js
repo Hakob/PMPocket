@@ -53,7 +53,6 @@ export default class SearchBox extends React.Component {
         autoCapitalize="none"
         autoCorrect={false}
         containerStyle={styles.autocompleteContainer}
-        listContainerStyle={styles.listContainerStyle}
         listStyle={styles.listStyle}
         inputContainerStyle={styles.inputContainerStyle}
         data={this.state.DBItems}
@@ -114,18 +113,12 @@ export default class SearchBox extends React.Component {
 const styles = StyleSheet.create({
   TextInputStyleClass: {
     textAlign: 'center',
-    height: 40,
     borderRadius: 20,
-  },
-  listContainerStyle: {
-    height: 150,
   },
   listStyle: {
     backgroundColor: '#FFEDDC',
-    zIndex: 1,
   },
   inputContainerStyle: {
-    width: 370,
     borderWidth: 0,
   },
   autocompleteContainer: {
@@ -137,8 +130,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: 'Boton',
     fontStyle: 'normal',
-    fontWeight: '300',
-    margin: 2,
+    fontWeight: '400',
+    margin: 8,
     color: '#0099bd',
     textAlign: 'center',
   },
