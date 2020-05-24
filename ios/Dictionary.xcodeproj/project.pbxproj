@@ -35,6 +35,10 @@
 		A54B9BE35C7A428486F91750 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C6DC63C450D4234AB67CD68 /* rubicon-icon-font.ttf */; };
 		BA7236734B6640068D55A53C /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62B53AA7D2904570A630FDEE /* SimpleLineIcons.ttf */; };
 		BD483F4679D241D59EA1DDAA /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB181149F6BC44CD84324612 /* Zocial.ttf */; };
+		6C2810B5C74F4157AE2DAB0F /* Boton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 034DFBB9340C46AD98AB6F76 /* Boton-Bold.ttf */; };
+		EA6A5C3B9D7340D396E8B56A /* Boton-Light-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8E051F058BF04FF89709DB0D /* Boton-Light-Italic.otf */; };
+		CF7889A83FC84B14BBD94A31 /* Boton-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 028CCC034F4A46CCA833124A /* Boton-Medium.otf */; };
+		CF324EF42759429988B92BCE /* Boton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B571C8DFEAEC4FC4BEB69FCB /* Boton-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +93,10 @@
 		1C6DC63C450D4234AB67CD68 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		62B53AA7D2904570A630FDEE /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		EB181149F6BC44CD84324612 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		034DFBB9340C46AD98AB6F76 /* Boton-Bold.ttf */ = {isa = PBXFileReference; name = "Boton-Bold.ttf"; path = "../src/assets/fonts/Boton-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E051F058BF04FF89709DB0D /* Boton-Light-Italic.otf */ = {isa = PBXFileReference; name = "Boton-Light-Italic.otf"; path = "../src/assets/fonts/Boton-Light-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		028CCC034F4A46CCA833124A /* Boton-Medium.otf */ = {isa = PBXFileReference; name = "Boton-Medium.otf"; path = "../src/assets/fonts/Boton-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B571C8DFEAEC4FC4BEB69FCB /* Boton-Regular.ttf */ = {isa = PBXFileReference; name = "Boton-Regular.ttf"; path = "../src/assets/fonts/Boton-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +226,10 @@
 				1C6DC63C450D4234AB67CD68 /* rubicon-icon-font.ttf */,
 				62B53AA7D2904570A630FDEE /* SimpleLineIcons.ttf */,
 				EB181149F6BC44CD84324612 /* Zocial.ttf */,
+				034DFBB9340C46AD98AB6F76 /* Boton-Bold.ttf */,
+				8E051F058BF04FF89709DB0D /* Boton-Light-Italic.otf */,
+				028CCC034F4A46CCA833124A /* Boton-Medium.otf */,
+				B571C8DFEAEC4FC4BEB69FCB /* Boton-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -378,6 +390,10 @@
 				A54B9BE35C7A428486F91750 /* rubicon-icon-font.ttf in Resources */,
 				BA7236734B6640068D55A53C /* SimpleLineIcons.ttf in Resources */,
 				BD483F4679D241D59EA1DDAA /* Zocial.ttf in Resources */,
+				6C2810B5C74F4157AE2DAB0F /* Boton-Bold.ttf in Resources */,
+				EA6A5C3B9D7340D396E8B56A /* Boton-Light-Italic.otf in Resources */,
+				CF7889A83FC84B14BBD94A31 /* Boton-Medium.otf in Resources */,
+				CF324EF42759429988B92BCE /* Boton-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

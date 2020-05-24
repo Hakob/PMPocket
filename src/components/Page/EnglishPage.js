@@ -113,7 +113,7 @@ export default class EnglishPage extends Component {
                   fontFamily: 'Boton-Light-Italic',
                   fontSize: 24,
                 }}>
-                German Translation:
+                German translation:
               </Text>
               <Item
                 title={
@@ -134,7 +134,7 @@ export default class EnglishPage extends Component {
                   fontFamily: 'Boton-Light-Italic',
                   fontSize: 24,
                 }}>
-                Related Words:
+                Related words:
               </Text>
               <SafeAreaView>
                 <FlatList
