@@ -10,6 +10,10 @@ import {
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export default class WelcomePage extends Component {
   render() {
