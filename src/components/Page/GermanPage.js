@@ -15,6 +15,10 @@ import {
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
 import SearchBox from './SearchBox';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
@@ -67,10 +71,11 @@ export default class GermanPage extends Component {
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <Container>
           <Header
-            containerStyle={{flex: 0.6}}
+            containerStyle={{flex: 1.5, bottom: 30}}
             backgroundColor="#ed6b0bf0"
-            rightContainerStyle={{flex: 1, right: 10, bottom: 10}}
-            centerContainerStyle={{bottom: 150}}
+            rightContainerStyle={{flex: 0.5}}
+            leftContainerStyle={{flex: 0.5}}
+            centerContainerStyle={{flex: -0.5}}
             centerComponent={
               <SearchBox
                 fromTo={this.tableName}
@@ -79,11 +84,16 @@ export default class GermanPage extends Component {
             }
             leftComponent={
               <TouchableOpacity
-                style={{left: 10, bottom: 100}}
                 onPress={() => Linking.openURL('https://pm-pocket.de')}>
                 <Image
-                  source={require('../../assets/logo-weiss.png')}
-                  style={{width: 100, height: 50}}
+                  source={require('../../assets/logo-weiss-1.png')}
+                  style={{
+                    right: hp('2%'),
+                    bottom: hp('8%'),
+                    height: hp('7%'),
+                    width: wp('40%'),
+                    resizeMode: 'contain',
+                  }}
                 />
               </TouchableOpacity>
             }
@@ -91,7 +101,13 @@ export default class GermanPage extends Component {
               <Icon
                 name="menu"
                 type="SimpleLineIcons"
-                style={{bottom: 100, color: 'white'}}
+                style={{
+                  left: hp('1%'),
+                  color: 'white',
+                  bottom: hp('8%'),
+                  width: wp('12%'),
+                  height: hp('7%'),
+                }}
                 onPress={() => {
                   Keyboard.dismiss();
                   this.props.navigation.openDrawer();
@@ -101,19 +117,18 @@ export default class GermanPage extends Component {
           />
           <View
             style={{
-              flex: 1,
+              flex: 2,
               justifyContent: 'center',
             }}>
-            <View style={{flex: 0.4}}>
+            <View style={{flex: 1}}>
               <Text
                 style={{
-                  top: 20,
-                  left: 25,
+                  left: wp('6%'),
                   color: '#005e6f',
                   fontFamily: 'Boton',
                   fontStyle: 'italic',
                   fontWeight: '400',
-                  fontSize: 24,
+                  fontSize: wp('5%'),
                 }}>
                 English translation:
               </Text>
@@ -126,17 +141,22 @@ export default class GermanPage extends Component {
                 }
               />
             </View>
-            <View style={{height: 1, backgroundColor: '#ed6b0bf0'}} />
-            <View style={{flex: 1}}>
+            <View
+              style={{
+                top: hp('-1.5%'),
+                height: 1,
+                backgroundColor: '#ed6b0bf0',
+              }}
+            />
+            <View style={{flex: 3}}>
               <Text
                 style={{
-                  top: 20,
-                  left: 25,
+                  left: wp('6%'),
                   color: '#005e6f',
                   fontFamily: 'Boton',
                   fontStyle: 'italic',
                   fontWeight: '400',
-                  fontSize: 24,
+                  fontSize: wp('5%'),
                 }}>
                 Related words:
               </Text>
@@ -156,24 +176,16 @@ export default class GermanPage extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    // backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   item: {
-    // backgroundColor: '#f9c2ff',
-    padding: 20,
-    marginVertical: 8,
-    marginHorizontal: 16,
+    height: hp('7%'),
+    left: wp('8%'),
   },
   title: {
-    left: 10,
+    left: wp('4%'),
     color: '#005e6f',
     fontFamily: 'Boton',
     fontStyle: 'normal',
-    fontWeight: '500',
-    fontSize: 20,
+    fontWeight: '400',
+    fontSize: wp('5%'),
   },
 });

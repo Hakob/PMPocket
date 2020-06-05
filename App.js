@@ -3,7 +3,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {
-  Text,
   View,
   SafeAreaView,
   Image,
@@ -13,9 +12,9 @@ import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
-  DrawerItem,
 } from '@react-navigation/drawer';
-import {Icon} from 'native-base';
+
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import GermanPage from './src/components/Page/GermanPage';
 import EnglishPage from './src/components/Page/EnglishPage';
 import WelcomePage from './src/components/Page/WelcomePage';
@@ -26,29 +25,12 @@ const Drawer = createDrawerNavigator();
 function CustomDrawerContent(props) {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={{height: 250, backgroundColor: '#d2d2d2', opacity: 0.9}}>
-        <View
-          style={{
-            height: 200,
-            backgroundColor: 'Green',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
+      <View style={{height: hp('30%'), backgroundColor: '#d2d2d2', opacity: 0.9}}>
           <Image
-            source={require('./src/assets/Fuchs_trans.png')}
-            style={{height: 150, width: 150}}
+            source={require('./src/assets/logo-weiss-2.png')}
+            style={{top: hp('10%'), height: hp('10%'), width: wp('45%'), alignSelf: 'center'}}
           />
         </View>
-        <View
-          style={{
-            height: 50,
-            backgroundColor: 'Green',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}>
-          <Text style={{fontFamily: 'Boton'}}>PM POCKET</Text>
-        </View>
-      </View>
       <DrawerContentScrollView {...props}>
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
@@ -64,7 +46,7 @@ function MyDrawer() {
       drawerContent={props => CustomDrawerContent(props)}
       drawerStyle={{
         backgroundColor: '#ed6b0b',
-        width: 240,
+        width: wp('70%'),
     }}>
       <Drawer.Screen name="Info" component={WelcomePage} />
       <Drawer.Screen name="German To English" component={GermanPage} />

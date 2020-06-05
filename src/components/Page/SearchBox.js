@@ -3,6 +3,10 @@ import {StyleSheet, Text, Keyboard} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
 
@@ -52,9 +56,8 @@ export default class SearchBox extends React.Component {
       <Autocomplete
         autoCapitalize="none"
         autoCorrect={false}
-        containerStyle={styles.autocompleteContainer}
-        listContainerStyle={styles.listContainerStyle}
-        listStyle={styles.listStyle}
+        // listContainerStyle={styles.listContainerStyle}
+        // listStyle={styles.listStyle}
         inputContainerStyle={styles.inputContainerStyle}
         data={this.state.DBItems}
         onChangeText={text => {
@@ -66,11 +69,14 @@ export default class SearchBox extends React.Component {
               ref={c => {
                 searchRef = c;
               }}
-              placeholder="Search here"
+              placeholder="Type here"
               onPressToFocus={true}
-              backgroundColor="#FFEDDC"
+              backgroundColor="#FFFFFF"
               fontFamily="Boton"
-              fontColor="#005e6f"
+              fontSize={hp('2%')}
+              iconSize={hp('2%')}
+              cancelIconSize={hp('2%')}
+              fontColor="#005e6f95"
               onPress={() => {
                 this.updateDBItems(this.state.searchedText);
               }}
@@ -112,34 +118,17 @@ export default class SearchBox extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  TextInputStyleClass: {
-    textAlign: 'center',
-    height: 40,
-    borderRadius: 20,
-  },
-  listContainerStyle: {
-    height: 150,
-  },
-  listStyle: {
-    backgroundColor: '#FFEDDC',
-    zIndex: 1,
-  },
   inputContainerStyle: {
-    width: 370,
     borderWidth: 0,
-  },
-  autocompleteContainer: {
-    height: 10,
-    borderWidth: 0,
-    top: 100,
   },
   itemText: {
-    fontSize: 16,
+    fontSize: hp('2%'),
     fontFamily: 'Boton',
     fontStyle: 'normal',
     fontWeight: '300',
     margin: 2,
     color: '#0099bd',
-    textAlign: 'center',
+    textAlign: 'left',
+    left: 20,
   },
 });

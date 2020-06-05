@@ -20,16 +20,24 @@ export default class WelcomePage extends Component {
     return (
       <Container>
         <Header
-          containerStyle={{flex: 0.8}}
+          containerStyle={{flex: 0.5}}
+          leftComponentStyle={{
+            height: hp('7%'),
+            width: wp('40%'),
+            resizeMode: 'contain',
+          }}
+          // containerStyle={{height: hp('20%')}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{right: 10}}
           leftComponent={
             <TouchableOpacity
-              style={{left: 10, bottom: 50}}
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
               <Image
-                source={require('../../assets/logo-weiss.png')}
-                style={{width: 100, height: 50}}
+                source={require('../../assets/logo-weiss-1.png')}
+                style={{
+                  height: hp('7%'),
+                  width: wp('40%'),
+                  resizeMode: 'contain',
+                }}
               />
             </TouchableOpacity>
           }
@@ -37,37 +45,35 @@ export default class WelcomePage extends Component {
             <Icon
               name="menu"
               type="SimpleLineIcons"
-              style={{bottom: 60, color: 'white'}}
+              style={{color: 'white', width: wp('12%'), height: hp('7%')}}
               onPress={() => this.props.navigation.openDrawer()}
             />
           }
         />
         <View style={{flex: 1, backgroundColor: '#eb6e0830'}}>
-          <SafeAreaView
-            style={{flex: 1, marginVertical: 20, flexDirection: 'row'}}>
+          <SafeAreaView style={{flex: 1, flexDirection: 'row'}}>
             <Text
               style={{
-                flex: 2,
                 color: '#005e6f',
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
                 fontWeight: '400',
-                fontSize: 25,
-                left: 30,
-                top: 30,
-                lineHeight: 40,
+                fontSize: hp('3%'),
+                alignSelf: 'center',
+                left: hp('2.2%'),
+                lineHeight: hp('5%'),
               }}>
               Your personal{'\n'}project management{'\n'}Dictionary!
             </Text>
             <Image
               source={require('../../assets/Fuchs_trans.png')}
-              style={{flex: 1, width: 100, height: 130, top: 25}}
+              style={{height: hp('16%'), width: wp('38%'), alignSelf: 'center'}}
             />
           </SafeAreaView>
         </View>
         <View
           style={{
-            flex: 1.5,
+            flex: 1,
             backgroundColor: '#ed6b0bf0',
             flexDirection: 'column-reverse',
           }}>
@@ -76,10 +82,11 @@ export default class WelcomePage extends Component {
               fontFamily: 'Boton',
               fontStyle: 'normal',
               fontWeight: '300',
-              fontSize: 15,
+              fontSize: hp('2%'),
               color: '#FFEDDC',
-              top: 52,
-              left: 30,
+              height: hp('22%'),
+              width: wp('50%'),
+              left: hp('2.2%'),
             }}>
             Dr. Martina Albrecht{'\n'}a@m Advisory GmbH{'\n'}Friedrichstraße 95
             POB 63{'\n'}10117 Berlin{'\n'}www.pm-pocket.de

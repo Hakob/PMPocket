@@ -24,7 +24,7 @@ export default class ImprintPage extends Component {
               style={{left: 10, bottom: 50}}
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
               <Image
-                source={require('../../assets/logo-weiss.png')}
+                source={require('../../assets/logo-weiss-1.png')}
                 style={{width: 100, height: 50}}
               />
             </TouchableOpacity>
