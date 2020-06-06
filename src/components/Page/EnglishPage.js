@@ -102,6 +102,7 @@ export default class EnglishPage extends Component {
                 name="menu"
                 type="SimpleLineIcons"
                 style={{
+                  fontSize: hp('3%'),
                   left: hp('1%'),
                   color: 'white',
                   bottom: hp('8%'),
