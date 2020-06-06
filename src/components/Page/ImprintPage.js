@@ -10,6 +10,10 @@ import {
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
+import {
+  widthPercentageToDP as wp,
+  heightPercentageToDP as hp,
+} from 'react-native-responsive-screen';
 
 export default class ImprintPage extends Component {
   render() {
@@ -33,7 +37,7 @@ export default class ImprintPage extends Component {
             <Icon
               name="menu"
               type="SimpleLineIcons"
-              style={{bottom: 60, color: 'white'}}
+              style={{fontSize: hp('3%'), bottom: 60, color: 'white'}}
               onPress={() => this.props.navigation.openDrawer()}
             />
           }

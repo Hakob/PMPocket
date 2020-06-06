@@ -71,7 +71,7 @@ export default class EnglishPage extends Component {
       <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <Container>
           <Header
-            containerStyle={{flex: 1.5, bottom: 30}}
+            containerStyle={{flex: 1.11}}
             backgroundColor="#ed6b0bf0"
             rightContainerStyle={{flex: 0.5}}
             leftContainerStyle={{flex: 0.5}}
@@ -88,7 +88,7 @@ export default class EnglishPage extends Component {
                 <Image
                   source={require('../../assets/logo-weiss-1.png')}
                   style={{
-                    right: hp('2%'),
+                    right: wp('3%'),
                     bottom: hp('8%'),
                     height: hp('7%'),
                     width: wp('40%'),
@@ -103,7 +103,7 @@ export default class EnglishPage extends Component {
                 type="SimpleLineIcons"
                 style={{
                   fontSize: hp('3%'),
-                  left: hp('1%'),
+                  left: wp('1%'),
                   color: 'white',
                   bottom: hp('8%'),
                   width: wp('12%'),
@@ -127,9 +127,11 @@ export default class EnglishPage extends Component {
                   left: wp('6%'),
                   color: '#005e6f',
                   fontFamily: 'Boton',
+                  top: hp('1.5%'),
                   fontStyle: 'italic',
                   fontWeight: '400',
                   fontSize: wp('5%'),
+                  paddingBottom: 20,
                 }}>
                 German translation:
               </Text>
