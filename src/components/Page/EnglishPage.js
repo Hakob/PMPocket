@@ -160,6 +160,7 @@ export default class EnglishPage extends Component {
                   fontStyle: 'italic',
                   fontWeight: '400',
                   fontSize: wp('5%'),
+                  paddingBottom: 20,
                 }}>
                 Related words:
               </Text>
@@ -180,7 +181,7 @@ export default class EnglishPage extends Component {
 
 const styles = StyleSheet.create({
   item: {
-    height: hp('7%'),
+    height: hp('6%'),
     left: wp('8%'),
   },
   title: {
