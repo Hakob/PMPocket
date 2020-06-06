@@ -20,16 +20,22 @@ export default class ImprintPage extends Component {
     return (
       <Container>
         <Header
-          containerStyle={{flex: 0.32}}
+          containerStyle={{flex: 1}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{right: 10}}
+          rightContainerStyle={{flex: 0.5}}
+          leftContainerStyle={{flex: 0.5}}
           leftComponent={
             <TouchableOpacity
-              style={{left: 10, bottom: 50}}
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
               <Image
                 source={require('../../assets/logo-weiss-1.png')}
-                style={{width: 100, height: 50}}
+                style={{
+                  right: wp('3%'),
+                  bottom: hp('3.13%'),
+                  height: hp('7%'),
+                  width: wp('40%'),
+                  resizeMode: 'contain',
+                }}
               />
             </TouchableOpacity>
           }
@@ -37,24 +43,36 @@ export default class ImprintPage extends Component {
             <Icon
               name="menu"
               type="SimpleLineIcons"
-              style={{fontSize: hp('3%'), bottom: 60, color: 'white'}}
-              onPress={() => this.props.navigation.openDrawer()}
+              style={{
+                fontSize: hp('3%'),
+                left: wp('1%'),
+                color: 'white',
+                bottom: hp('3.13%'),
+                width: wp('12%'),
+                height: hp('8%'),
+              }}
+              onPress={() => {
+                this.props.navigation.openDrawer();
+              }}
             />
           }
         />
-        <View style={{flex: 1, backgroundColor: '#eb6e0830'}}>
+        <View style={{flex: 2.75}}>
           <SafeAreaView
-            style={{flex: 1, marginVertical: 20, flexDirection: 'column'}}>
+            style={{
+              flex: 1,
+              marginVertical: hp('10%'),
+              marginHorizontal: wp('10%'),
+              flexDirection: 'column',
+            }}>
             <Text
               style={{
                 flex: 1,
                 color: '#005e6f',
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
-                fontWeight: '400',
-                fontSize: 25,
-                left: 30,
-                top: 30,
+                fontWeight: '500',
+                fontSize: hp('4%'),
               }}>
               Imprint
             </Text>
@@ -65,16 +83,15 @@ export default class ImprintPage extends Component {
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
                 fontWeight: '300',
-                fontSize: 20,
-                left: 30,
+                fontSize: hp('2%'),
               }}>
               Dr. Martina Albrecht{'\n'}Platzhalter{'\n'}Dae cus, occullibusa
               volesti nulparibus.{'\n'}
               {'\n'}Unt, simet fugit quatum et rem as ut{'\n'}assinctiaes
-              preptius qui solumquia que consedita que con rem secti sam{'\n'}
+              preptius qui solumquia que consedita que con rem secti sam
               harcipist elia con pelit{'\n'}
-              {'\n'}que vendam, eos doluptis aces{'\n'}alitemquam remolorem
-              nimin cora{'\n'}aspicab or
+              {'\n'}que vendam, eos doluptis aces alitem-quam remolorem nimin
+              cora aspicab or
             </Text>
           </SafeAreaView>
         </View>
