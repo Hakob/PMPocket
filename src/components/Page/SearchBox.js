@@ -3,10 +3,7 @@ import {StyleSheet, Text, Keyboard} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
-import {
-  heightPercentageToDP as hp,
-  widthPercentageToDP as wp,
-} from 'react-native-responsive-screen';
+import {heightPercentageToDP as hp} from 'react-native-responsive-screen';
 var SQLite = require('react-native-sqlite-storage');
 var db = SQLite.openDatabase({name: 'dict.db', createFromLocation: 1});
 
@@ -56,8 +53,6 @@ export default class SearchBox extends React.Component {
       <Autocomplete
         autoCapitalize="none"
         autoCorrect={false}
-        // listContainerStyle={styles.listContainerStyle}
-        // listStyle={styles.listStyle}
         inputContainerStyle={styles.inputContainerStyle}
         data={this.state.DBItems}
         onChangeText={text => {
