@@ -20,8 +20,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* DictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DictionaryTests.m */; };
 		50E7418CFAC24C91AF28722D /* Boton-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0A46050DE8547BFAD875B01 /* Boton-LightItalic.otf */; };
 		7C198CD8FAD98B34D949F030 /* libPods-Dictionary-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E255347085D5FF790CEB7C80 /* libPods-Dictionary-tvOS.a */; };
-		A634BEE0B8BD4519B6AA1BBB /* Boton-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1497695CD5141FEB829B300 /* Boton-Light.ttf */; };
 		ADA5612D94412B26C9DDA893 /* libPods-Dictionary-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD49DF46915C6A57AB0B1532 /* libPods-Dictionary-tvOSTests.a */; };
+		BF04ADE5EBFD4341ACC0CEAE /* Boton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7798787D0E96494787C5CD11 /* Boton-Regular.ttf */; };
 		D99E8DBC91B21639DB1EC67F /* libPods-DictionaryTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A26B370DF7E54D2AE4FBB4D4 /* libPods-DictionaryTests.a */; };
 		E9646C31D7ABDA67A8D7A4A6 /* libPods-Dictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07777710F08AD376DDED6876 /* libPods-Dictionary.a */; };
 /* End PBXBuildFile section */
@@ -74,6 +74,7 @@
 		591E7A8A65955C1D608BD520 /* Pods-Dictionary-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictionary-tvOS.release.xcconfig"; path = "Target Support Files/Pods-Dictionary-tvOS/Pods-Dictionary-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		62B53AA7D2904570A630FDEE /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		66303B6E1BEDABC5B42228F3 /* Pods-DictionaryTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictionaryTests.debug.xcconfig"; path = "Target Support Files/Pods-DictionaryTests/Pods-DictionaryTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7798787D0E96494787C5CD11 /* Boton-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Boton-Regular.ttf"; path = "../assets/fonts/Boton-Regular.ttf"; sourceTree = "<group>"; };
 		88315A16200E49D59D1A63E8 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		933A6F0FB55141D09B33CDAD /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		A26B370DF7E54D2AE4FBB4D4 /* libPods-DictionaryTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DictionaryTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +202,7 @@
 				D1497695CD5141FEB829B300 /* Boton-Light.ttf */,
 				E0A46050DE8547BFAD875B01 /* Boton-LightItalic.otf */,
 				C4ADBAA4DFD74E34AA368BD7 /* Boton-Medium.otf */,
+				7798787D0E96494787C5CD11 /* Boton-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -401,9 +403,9 @@
 				0AEF25B7240A7EF6006C6B68 /* www in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
-				A634BEE0B8BD4519B6AA1BBB /* Boton-Light.ttf in Resources */,
 				50E7418CFAC24C91AF28722D /* Boton-LightItalic.otf in Resources */,
 				1459533E325644169DAB6C46 /* Boton-Medium.otf in Resources */,
+				BF04ADE5EBFD4341ACC0CEAE /* Boton-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
