@@ -25,10 +25,10 @@ const Drawer = createDrawerNavigator();
 function CustomDrawerContent(props) {
   return (
     <SafeAreaView style={{flex: 1}}>
-      <View style={{height: hp('30%'), backgroundColor: '#d2d2d2', opacity: 0.9}}>
+      <View style={{flex: 0.5, height: hp('30%'), backgroundColor: '#d2d2d2', opacity: 0.9}}>
           <Image
             source={require('./src/assets/logo-weiss-2.png')}
-            style={{top: hp('10%'), height: hp('10%'), width: wp('45%'), alignSelf: 'center'}}
+            style={{top: hp('10%'), height: hp('10%'), width: wp('33%'), alignSelf: 'center', overflow: 'visible'}}
           />
         </View>
       <DrawerContentScrollView {...props}>
@@ -43,7 +43,14 @@ function MyDrawer() {
     <Drawer.Navigator
       initialRouteName="Info"
       drawerPosition="left"
+      drawerType="front"
       drawerContent={props => CustomDrawerContent(props)}
+      drawerContentOptions={{
+        activeTintColor: '#D80070',
+        inactiveTintColor: '#005E6F',
+        labelStyle: {left: wp('3%'), fontSize: hp('2%')},
+        itemStyle: { height: hp('6%')},
+      }}
       drawerStyle={{
         backgroundColor: '#ed6b0b',
         width: wp('70%'),
