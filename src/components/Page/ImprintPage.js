@@ -74,7 +74,17 @@ export default class ImprintPage extends Component {
                 fontWeight: '500',
                 fontSize: hp('4%'),
               }}>
-              Imprint
+              Impressum
+            </Text>
+            <Text
+              style={{
+                color: '#005e6f',
+                fontFamily: 'Boton',
+                fontStyle: 'normal',
+                fontWeight: '500',
+                fontSize: hp('2%'),
+              }}>
+              Dr. phil. Martina Albrecht
             </Text>
             <Text
               style={{
@@ -84,14 +94,16 @@ export default class ImprintPage extends Component {
                 fontStyle: 'normal',
                 fontWeight: '300',
                 fontSize: hp('2%'),
+                lineHeight: hp('2.5%'),
               }}>
-              Dr. Martina Albrecht{'\n'}Platzhalter{'\n'}Dae cus, occullibusa
-              volesti nulparibus.{'\n'}
-              {'\n'}Unt, simet fugit quatum et rem as ut{'\n'}assinctiaes
-              preptius qui solumquia que consedita que con rem secti sam
-              harcipist elia con pelit{'\n'}
-              {'\n'}que vendam, eos doluptis aces alitem-quam remolorem nimin
-              cora aspicab or
+              Geschäftsführung a@m Advisory GmbH{'\n'}
+              Amtsgericht Charlottenburg /{'\n'}HRB 107301 B{'\n'}
+              {'\n'}Steuernummer 37/512/21273{'\n'}
+              {'\n'}Friedrichstraße 95 POB 63{'\n'}10117 Berlin-Mitte{'\n'}Fon
+              +49 30 57 79 54 79 (Sekretariat){'\n'}Mobil +49 173 24 880 24
+              {'\n'}
+              {'\n'}Copyright © 2009-2020 Martina Albrecht{'\n'}Alle Rechte
+              vorbehalten.
             </Text>
           </SafeAreaView>
         </View>
