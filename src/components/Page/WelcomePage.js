@@ -66,10 +66,10 @@ export default class WelcomePage extends Component {
                 fontFamily: 'Boton',
                 fontStyle: 'normal',
                 fontWeight: '500',
-                fontSize: hp('3%'),
+                fontSize: wp('6%'),
                 alignSelf: 'center',
                 left: wp('6%'),
-                lineHeight: hp('5%'),
+                lineHeight: wp('10%'),
               }}>
               Your personal{'\n'}project management{'\n'}Dictionary!
             </Text>
@@ -99,7 +99,6 @@ export default class WelcomePage extends Component {
               fontSize: hp('2%'),
               color: '#FFEDDC',
               height: hp('22%'),
-              width: wp('52%'),
               left: wp('6%'),
             }}>
             Dr. Martina Albrecht{'\n'}a@m Advisory GmbH{'\n'}Friedrichstraße 95
