@@ -96,7 +96,7 @@ export default class ImprintPage extends Component {
                 fontSize: wp('4%'),
                 lineHeight: hp('2.5%'),
               }}>
-              Geschäftsführung a@m Advisory GmbH{'\n'}
+              Geschäftsführung{'\n'}a@m Advisory GmbH{'\n'}
               Amtsgericht Charlottenburg /{'\n'}HRB 107301 B{'\n'}
               {'\n'}Steuernummer 37/512/21273{'\n'}
               {'\n'}Friedrichstraße 95 POB 63{'\n'}10117 Berlin-Mitte{'\n'}
