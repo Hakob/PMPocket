@@ -11,6 +11,7 @@ import {
   Keyboard,
   Linking,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -78,27 +79,29 @@ export default class EnglishPage extends Component {
               ...Platform.select({
                 ios: {},
                 android: {
-                  bottom: hp('3%')
+                  bottom: hp('3%'),
                 },
-              })
+              }),
             }}
             leftContainerStyle={{
               flex: 0.5,
               ...Platform.select({
                 ios: {},
                 android: {
-                  bottom: hp('3%')
+                  bottom: hp('3%'),
                 },
-              })
+              }),
             }}
             centerContainerStyle={{
               flex: -0.5,
               ...Platform.select({
-                ios: {},
-                android: {
-                  top: hp('11.6%')
+                ios: {
+                  bottom: hp('1.1%'),
                 },
-              })
+                android: {
+                  top: hp('11.6%'),
+                },
+              }),
             }}
             centerComponent={
               <SearchBox

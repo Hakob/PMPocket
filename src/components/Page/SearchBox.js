@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, Keyboard} from 'react-native';
+import {StyleSheet, Text, Keyboard, Platform} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
@@ -68,18 +68,16 @@ export default class SearchBox extends React.Component {
               placeholder="Type here"
               onPressToFocus={true}
               backgroundColor="#FFFFFF"
-              {
-                ...Platform.select({
-                  ios: {
-                    fontFamily: 'Boton',
-                    fontStyle: 'normal',
-                    fontWeight: '400',
-                  },
-                  android: {
-                    fontFamily: 'Boton-Medium',
-                  },
-                })
-              }
+              {...Platform.select({
+                ios: {
+                  fontFamily: 'Boton',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                },
+                android: {
+                  fontFamily: 'Boton-Medium',
+                },
+              })}
               fontSize={hp('2.3%')}
               iconSize={hp('3%')}
               cancelIconSize={hp('3%')}

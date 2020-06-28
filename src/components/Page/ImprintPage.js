@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Linking,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -29,16 +30,16 @@ export default class ImprintPage extends Component {
               android: {
                 bottom: hp('2.85%'),
               },
-            })
+            }),
           }}
           leftContainerStyle={{
             flex: 0.5,
             ...Platform.select({
               ios: {},
               android: {
-                bottom: hp('3.2%')
+                bottom: hp('3.2%'),
               },
-            })
+            }),
           }}
           leftComponent={
             <TouchableOpacity

@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
@@ -6,6 +5,7 @@ import {
   View,
   SafeAreaView,
   Image,
+  Platform,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -40,7 +40,7 @@ function CustomDrawerContent(props) {
                 },
               }),
               alignSelf: 'center',
-              overflow: 'visible'
+              overflow: 'visible',
             }}
           />
         </View>
