@@ -11,6 +11,7 @@ import {
   Keyboard,
   Linking,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -73,9 +74,35 @@ export default class GermanPage extends Component {
           <Header
             containerStyle={{flex: 1.11}}
             backgroundColor="#ed6b0bf0"
-            rightContainerStyle={{flex: 0.5}}
-            leftContainerStyle={{flex: 0.5}}
-            centerContainerStyle={{flex: -0.5}}
+            rightContainerStyle={{
+              flex: 0.5,
+              ...Platform.select({
+                ios: {},
+                android: {
+                  bottom: hp('3%'),
+                },
+              }),
+            }}
+            leftContainerStyle={{
+              flex: 0.5,
+              ...Platform.select({
+                ios: {},
+                android: {
+                  bottom: hp('3%'),
+                },
+              }),
+            }}
+            centerContainerStyle={{
+              flex: -0.5,
+              ...Platform.select({
+                ios: {
+                  bottom: hp('1.1%'),
+                },
+                android: {
+                  top: hp('11.6%'),
+                },
+              }),
+            }}
             centerComponent={
               <SearchBox
                 fromTo={this.tableName}
@@ -84,12 +111,16 @@ export default class GermanPage extends Component {
             }
             leftComponent={
               <TouchableOpacity
+                style={{
+                  // TODO Test in iOS
+                  right: wp('3%'),
+                  bottom: hp('8%'),
+                }}
                 onPress={() => Linking.openURL('https://pm-pocket.de')}>
                 <Image
                   source={require('../../assets/logo-weiss-1.png')}
                   style={{
-                    right: wp('3%'),
-                    bottom: hp('8%'),
+                    // See todo above
                     height: hp('7%'),
                     width: wp('40%'),
                     resizeMode: 'contain',
@@ -126,10 +157,17 @@ export default class GermanPage extends Component {
                 style={{
                   left: wp('6%'),
                   color: '#005e6f',
-                  fontFamily: 'Boton',
-                  fontStyle: 'italic',
+                  ...Platform.select({
+                    ios: {
+                      fontFamily: 'Boton',
+                      fontStyle: 'italic',
+                      fontWeight: '400',
+                    },
+                    android: {
+                      fontFamily: 'Boton-LightItalic',
+                    },
+                  }),
                   top: hp('1.5%'),
-                  fontWeight: '400',
                   fontSize: wp('5%'),
                   paddingBottom: 20,
                 }}>
@@ -156,9 +194,16 @@ export default class GermanPage extends Component {
                 style={{
                   left: wp('6%'),
                   color: '#005e6f',
-                  fontFamily: 'Boton',
-                  fontStyle: 'italic',
-                  fontWeight: '400',
+                  ...Platform.select({
+                    ios: {
+                      fontFamily: 'Boton',
+                      fontStyle: 'italic',
+                      fontWeight: '400',
+                    },
+                    android: {
+                      fontFamily: 'Boton-LightItalic',
+                    },
+                  }),
                   fontSize: wp('5%'),
                   paddingBottom: 20,
                 }}>
@@ -187,9 +232,16 @@ const styles = StyleSheet.create({
   title: {
     left: wp('4%'),
     color: '#005e6f',
-    fontFamily: 'Boton',
-    fontStyle: 'normal',
-    fontWeight: '400',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Boton',
+        fontStyle: 'normal',
+        fontWeight: '400',
+      },
+      android: {
+        fontFamily: 'Boton-Medium',
+      },
+    }),
     fontSize: wp('5%'),
   },
 });

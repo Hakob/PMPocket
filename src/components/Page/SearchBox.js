@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, Keyboard} from 'react-native';
+import {StyleSheet, Text, Keyboard, Platform} from 'react-native';
 import SearchBar from 'react-native-dynamic-search-bar';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import Autocomplete from 'react-native-autocomplete-input';
@@ -54,6 +54,7 @@ export default class SearchBox extends React.Component {
         autoCapitalize="none"
         autoCorrect={false}
         inputContainerStyle={styles.inputContainerStyle}
+        listContainerStyle={styles.listContainerStyle}
         data={this.state.DBItems}
         onChangeText={text => {
           this.updateDBItems(text);
@@ -67,8 +68,17 @@ export default class SearchBox extends React.Component {
               placeholder="Type here"
               onPressToFocus={true}
               backgroundColor="#FFFFFF"
-              fontFamily="Boton"
-              fontSize={hp('2%')}
+              {...Platform.select({
+                ios: {
+                  fontFamily: 'Boton',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                },
+                android: {
+                  fontFamily: 'Boton-Medium',
+                },
+              })}
+              fontSize={hp('2.3%')}
               iconSize={hp('3%')}
               cancelIconSize={hp('3%')}
               fontColor="#005e6f95"
@@ -116,11 +126,26 @@ const styles = StyleSheet.create({
   inputContainerStyle: {
     borderWidth: 0,
   },
+  listContainerStyle: {
+    ...Platform.select({
+      ios: {},
+      android: {
+        height: hp('18%'),
+      },
+    }),
+  },
   itemText: {
     fontSize: hp('2%'),
-    fontFamily: 'Boton',
-    fontStyle: 'normal',
-    fontWeight: '300',
+    ...Platform.select({
+      ios: {
+        fontFamily: 'Boton',
+        fontStyle: 'normal',
+        fontWeight: '300',
+      },
+      android: {
+        fontFamily: 'Boton-Regular',
+      },
+    }),
     margin: 2,
     color: '#0099bd',
     textAlign: 'left',

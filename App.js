@@ -1,4 +1,3 @@
-/* eslint-disable no-alert */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
@@ -6,6 +5,7 @@ import {
   View,
   SafeAreaView,
   Image,
+  Platform,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -28,7 +28,20 @@ function CustomDrawerContent(props) {
       <View style={{flex: 0.5, height: hp('30%'), backgroundColor: '#d2d2d2', opacity: 0.9}}>
           <Image
             source={require('./src/assets/logo-weiss-2.png')}
-            style={{top: hp('10%'), height: hp('10%'), width: wp('33%'), alignSelf: 'center', overflow: 'visible'}}
+            style={{
+              top: hp('10%'),
+              height: hp('10%'),
+              ...Platform.select({
+                ios: {
+                  width: wp('33%'),
+                },
+                android: {
+                  width: wp('38%'),
+                },
+              }),
+              alignSelf: 'center',
+              overflow: 'visible',
+            }}
           />
         </View>
       <DrawerContentScrollView {...props}>
@@ -48,7 +61,20 @@ function MyDrawer() {
       drawerContentOptions={{
         activeTintColor: '#D80070',
         inactiveTintColor: '#005E6F',
-        labelStyle: {left: wp('3%'), fontSize: hp('2%')},
+        labelStyle: {
+          left: wp('3%'),
+          fontSize: wp('4.5%'),
+          ...Platform.select({
+            ios: {
+              fontFamily: 'Boton',
+              fontStyle: 'normal',
+              fontWeight: '400',
+            },
+            android: {
+              fontFamily: 'Boton-Regular',
+            },
+          }),
+        },
         itemStyle: { height: hp('6%')},
       }}
       drawerStyle={{

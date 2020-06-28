@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Linking,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -22,8 +23,24 @@ export default class WelcomePage extends Component {
         <Header
           containerStyle={{flex: 1.46}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{flex: 0.5}}
-          leftContainerStyle={{flex: 0.5}}
+          rightContainerStyle={{
+            flex: 0.5,
+            ...Platform.select({
+              ios: {},
+              android: {
+                bottom: hp('2.85%'),
+              },
+            }),
+          }}
+          leftContainerStyle={{
+            flex: 0.5,
+            ...Platform.select({
+              ios: {},
+              android: {
+                bottom: hp('3.2%'),
+              },
+            }),
+          }}
           leftComponent={
             <TouchableOpacity
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
@@ -63,9 +80,16 @@ export default class WelcomePage extends Component {
               style={{
                 flex: 2,
                 color: '#005e6f',
-                fontFamily: 'Boton',
-                fontStyle: 'normal',
-                fontWeight: '500',
+                ...Platform.select({
+                  ios: {
+                    fontFamily: 'Boton',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                  },
+                  android: {
+                    fontFamily: 'Boton-Medium',
+                  },
+                }),
                 fontSize: wp('6%'),
                 alignSelf: 'center',
                 left: wp('6%'),
@@ -93,9 +117,17 @@ export default class WelcomePage extends Component {
           }}>
           <Text
             style={{
-              fontFamily: 'Boton',
-              fontStyle: 'normal',
-              fontWeight: '400',
+              ...Platform.select({
+                ios: {
+                  fontFamily: 'Boton',
+                  fontStyle: 'normal',
+                  fontWeight: '400',
+                },
+                android: {
+                  fontFamily: 'Boton-Regular',
+                  lineHeight: hp('2.8%'),
+                },
+              }),
               fontSize: hp('2%'),
               color: '#FFEDDC',
               height: hp('22%'),

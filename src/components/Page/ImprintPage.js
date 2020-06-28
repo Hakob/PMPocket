@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Linking,
   TouchableOpacity,
+  Platform,
 } from 'react-native';
 import {Header} from 'react-native-elements';
 import {Icon, Container} from 'native-base';
@@ -22,8 +23,24 @@ export default class ImprintPage extends Component {
         <Header
           containerStyle={{flex: 1}}
           backgroundColor="#ed6b0bf0"
-          rightContainerStyle={{flex: 0.5}}
-          leftContainerStyle={{flex: 0.5}}
+          rightContainerStyle={{
+            flex: 0.5,
+            ...Platform.select({
+              ios: {},
+              android: {
+                bottom: hp('2.85%'),
+              },
+            }),
+          }}
+          leftContainerStyle={{
+            flex: 0.5,
+            ...Platform.select({
+              ios: {},
+              android: {
+                bottom: hp('3.2%'),
+              },
+            }),
+          }}
           leftComponent={
             <TouchableOpacity
               onPress={() => Linking.openURL('https://pm-pocket.de')}>
@@ -69,9 +86,16 @@ export default class ImprintPage extends Component {
               style={{
                 flex: 1,
                 color: '#005e6f',
-                fontFamily: 'Boton',
-                fontStyle: 'normal',
-                fontWeight: '500',
+                ...Platform.select({
+                  ios: {
+                    fontFamily: 'Boton',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                  },
+                  android: {
+                    fontFamily: 'Boton-Medium',
+                  },
+                }),
                 fontSize: wp('8%'),
               }}>
               Impressum
@@ -79,9 +103,16 @@ export default class ImprintPage extends Component {
             <Text
               style={{
                 color: '#005e6f',
-                fontFamily: 'Boton',
-                fontStyle: 'normal',
-                fontWeight: '500',
+                ...Platform.select({
+                  ios: {
+                    fontFamily: 'Boton',
+                    fontStyle: 'normal',
+                    fontWeight: '500',
+                  },
+                  android: {
+                    fontFamily: 'Boton-Medium',
+                  },
+                }),
                 fontSize: wp('5%'),
               }}>
               Dr. phil. Martina Albrecht
@@ -90,11 +121,19 @@ export default class ImprintPage extends Component {
               style={{
                 flex: 3,
                 color: '#005e6f',
-                fontFamily: 'Boton',
-                fontStyle: 'normal',
-                fontWeight: '300',
+                ...Platform.select({
+                  ios: {
+                    fontFamily: 'Boton',
+                    fontStyle: 'normal',
+                    fontWeight: '300',
+                    lineHeight: hp('2.5%'),
+                  },
+                  android: {
+                    fontFamily: 'Boton-Regular',
+                    lineHeight: hp('3%'),
+                  },
+                }),
                 fontSize: wp('4%'),
-                lineHeight: hp('2.5%'),
               }}>
               Geschäftsführung{'\n'}a@m Advisory GmbH{'\n'}
               Amtsgericht Charlottenburg /{'\n'}HRB 107301 B{'\n'}
