@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   Image,
   Platform,
+  StatusBar,
 } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
@@ -25,6 +26,7 @@ const Drawer = createDrawerNavigator();
 function CustomDrawerContent(props) {
   return (
     <SafeAreaView style={{flex: 1}}>
+      <StatusBar translucent backgroundColor="#ed6b0b"/>
       <View style={{flex: 0.5, height: hp('30%'), backgroundColor: '#d2d2d2', opacity: 0.9}}>
           <Image
             source={require('./src/assets/logo-weiss-2.png')}

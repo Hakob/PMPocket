@@ -130,20 +130,21 @@ const styles = StyleSheet.create({
     ...Platform.select({
       ios: {},
       android: {
-        height: hp('18%'),
+        height: hp('19.5%'),
       },
     }),
   },
   itemText: {
-    fontSize: hp('2%'),
     ...Platform.select({
       ios: {
         fontFamily: 'Boton',
         fontStyle: 'normal',
         fontWeight: '300',
+        fontSize: hp('2%'),
       },
       android: {
         fontFamily: 'Boton-Regular',
+        fontSize: hp('2.2%'),
       },
     }),
     margin: 2,
