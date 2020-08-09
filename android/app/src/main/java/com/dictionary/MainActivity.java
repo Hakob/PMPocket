@@ -1,4 +1,4 @@
-package com.dictionary;
+package de.pmpocket.dictionary;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;

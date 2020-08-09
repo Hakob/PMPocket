@@ -1,4 +1,4 @@
-package com.dictionary;
+package de.pmpocket.dictionary;
 
 import android.app.Application;
 import android.content.Context;
