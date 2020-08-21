@@ -78,7 +78,7 @@ export default class ImprintPage extends Component {
           <SafeAreaView
             style={{
               flex: 1,
-              marginVertical: hp('10%'),
+              marginVertical: hp('4%'),
               marginHorizontal: wp('10%'),
               flexDirection: 'column',
             }}>
